@@ -1,0 +1,177 @@
+body, .page{
+    max-width: 1500px;
+    min-width: 850px;
+    margin: auto;
+}
+
+#block-page{
+    margin: auto;
+
+    header{
+        display: flex;
+        width: 60%;
+        height: 90px;
+        float:  left;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        margin-left: 65px;
+
+        .div__logo{
+
+            > img{
+                width: 200px;
+                height: 52px;
+            }
+        }
+    
+        .hashtags{
+            display: flex;
+            justify-content: space-around;
+            padding-left: 100px;
+
+            > div{
+                color: $rouge;
+                font-family: 'DM-Sans';
+                font-weight: bold;
+                font-size: 12px;
+                border-radius: 15px;
+                border: 1px solid #d7d7d7;
+                margin-right: 7px;
+                padding-right: 5px;
+                padding-left: 5px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .div__titre-page{
+        float: right;
+        width: 30%;
+        height: 90px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 15px;
+
+        .titre-page{
+            font-family: 'DM-Sans';
+            font-size: 36px;
+            font-weight: normal;
+            color: $rouge;
+        }
+    }
+
+    .conteneur1{
+        padding-top: 160px;
+
+        .conteneur1_2{
+            padding-top: 50px;
+        }
+
+        .conteneur1_1, .conteneur1_2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .div__photograph{
+                width: 33%;
+
+                .div__portrait{
+                    display: flex;
+                    flex-direction: column;
+                    color: $orange;
+                    height: 250px;
+    
+                    > div{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        > a{
+
+                            > img{
+                                border-radius: 50%;
+                                object-fit: cover;
+                                height: 190px;
+                                width: 190px;
+                            }
+                        }
+                    }
+    
+                    .nom{
+                        height: 45px;   
+                        padding-top: 15px;
+
+                        > a{
+                            text-decoration: none;
+                            color: $orange;
+
+                            > h1{
+                                font-family: 'DM-Sans';
+                                font-size: 36px;
+                                font-weight: normal;
+                                margin: 0px;
+                            }
+                        }
+                    }
+                }
+    
+                .div__info{
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 5px;
+    
+                    > h3{
+                        display: flex;
+                        justify-content: center;
+                        margin: 0px;
+                        font-family: 'DM-Sans';
+                        font-weight: normal;
+                    }
+    
+                    .ville{
+                        color: $rouge;
+                        font-size: 13px;
+                    }
+    
+                    .phrase-intro{
+                        color: $noir;
+                        padding-top: 5px;
+                        font-size: 10px;
+                    }
+    
+                    .tarif{
+                        color: $gris;
+                        padding-top: 3px;
+                        font-size: 9px;
+                    }
+                }
+    
+                .div__hashtags{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 8px;
+    
+                    > div{
+                        color: $rouge;
+                        font-family: 'DM-Sans';
+                        font-weight: bold;
+                        font-style: normal;
+                        font-size: 12px;
+                        border-radius: 15px;
+                        border: 1px solid #d7d7d7;
+                        margin-right: 7px;
+                        padding-right: 5px;
+                        padding-left: 5px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,431 @@
+// responsive page principale mobile
+@media all and (max-width: 375px){
+
+    .page{
+        width: 375px;
+
+        #block-page{
+            width: 375px;
+            margin: auto;
+        
+            header{
+                flex-wrap: wrap;
+                width: 100%;
+                height: 150px;
+                margin-left: 0px;
+        
+                .div__logo{
+                    width: 50%;
+                    margin-left: -110px;
+
+                    > img{
+                        width: 150px;
+                        height: 40px;
+                    }
+                }
+            
+                .hashtags{
+                    width: 80%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    padding-left: 0px;
+        
+                    > div{
+                        margin-top: 5px;
+
+                    }
+                }
+            }
+        
+            .div__titre-page{
+                float: none;
+                position: absolute;
+                left: 220px;
+                width: 40%;
+                height: 50px;
+                padding-top: 25px;
+        
+                .titre-page{
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+
+            .conteneur1{
+                padding-top: 200px;
+                width: 90%;
+                margin: auto;
+
+                .conteneur1_2{
+                    padding-top: 0px;
+                }
+        
+                .conteneur1_1, .conteneur1_2{
+                    flex-direction: column;
+        
+                    .div__photograph{
+                        width: 100%;
+                        margin-bottom: 20px;
+        
+                        .div__portrait{
+                            height: 245px;
+            
+                            .nom{
+                                height: 35px;   
+        
+                                > h1{
+                                    padding-top: 0px;
+                                }
+                            }
+                        }
+            
+                        .div__info{
+                            padding-top: 0px;
+            
+                            .phrase-intro{
+                                padding-top: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//responsive page principale tablette
+@media all and (min-width: 376px) and (max-width:768px){
+
+    .page{
+        width: 768px;
+
+        #block-page{
+            width: 768px;
+            margin: auto;
+        
+            header{
+                flex-wrap: wrap;
+                width: 100%;
+                height: 140px;
+                justify-content: flex-start;
+                margin-left: 0px;
+        
+                .div__logo{
+                    padding-left: 60px;
+                    height: 40px;
+                }
+            }
+        
+            .div__titre-page{
+                position: absolute;
+                left: 415px;
+                width: 50%;
+            }
+        
+            .conteneur1{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                padding-top: 20px;
+                align-items: center;
+        
+                .conteneur1_1, .conteneur1_2{
+                    flex-direction: column;
+                    width: 50%;
+                    padding-top: 0px;
+        
+                    .div__photograph{
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//responsive page principale 
+@media all and (min-width: 769px) and (max-width:1300px){
+
+    .page{
+
+        #block-page{
+            margin: auto;
+        
+            header{
+                width: 66%;
+                justify-content: flex-start;
+                margin-left: 0px;
+        
+                .div__logo{
+                    padding-left: 60px;
+                    height: 40px;
+                }
+
+                .hashtags{
+                    width: 100%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-left: 28px;
+                    padding-left: 0;
+        
+                    > div{
+                        margin-top: 5px;
+
+                    }
+                }
+            }
+        
+            .div__titre-page{
+                float: right;
+                width: 28%;
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+
+// responsive page photographe mobile
+@media all and (max-width: 375px){
+
+    .page{
+        width: 375px;
+        min-width: 0;
+    
+        .block-page{
+        
+            .header{
+                height: 50px;
+                padding-top: 20px;
+        
+                .div__logo{
+        
+                    > img{
+                        width: 130px;
+                        height: 37px;
+                    }
+                }
+            }
+    
+            .conteneur1{
+                height: 160px;
+                background-color: white;
+    
+                .div__info-profil{
+                    width: 70%;
+                    padding-left: 0%;
+    
+                    .nom{
+    
+                        > h1{
+                            font-size: 36px;
+                            line-height: 40px;
+                        }
+                    }
+    
+                    .ville{
+                        font-size: 13px;
+                    }
+    
+                    .phrase-intro{
+                        font-size: 13px;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+    
+                    .div__hashtags{
+    
+                        > div{
+                            font-size: 13px;
+                        }
+
+                        .animals{
+                            display: none;
+                        }
+                    }
+                }
+    
+                .div__bouton{
+                    display: none;               
+                }
+    
+                .div__portrait{
+                    width: 30%;
+    
+                    > img{
+                        height: 100px;
+                        width: 100px;                        
+                    }
+                }
+            }
+
+            .conteneur2{
+
+                .tri{
+                    display: none;
+                }
+    
+                .galerie{
+                    margin-bottom: 20px;
+        
+                    .galerie__ligne1, .galerie__ligne2{
+                        flex-direction: column;
+                        width: 100%;
+                        margin-bottom: 0px;
+        
+                        .poste__photo{
+                            width: 100%;
+                            margin-top: 10px;
+
+                            .div__img{
+                                height: 190px;
+                            }
+    
+                            img{
+                                height: 190px;
+                            }
+    
+                            .description__photo{
+                                width: 100%;
+                                padding-top: 10px;
+
+                                .nom__photo{
+                                    width: 85%;
+                                }
+    
+                                h2, p{
+                                    margin: 0;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }       
+                }
+            }
+        }
+    }
+}
+
+// responsive page photographe tablette
+@media all and (min-width: 376px) and (max-width:768px){
+
+    .page{
+        width: 768px;
+        min-width: 0;
+    
+        .block-page{
+        
+            .header{
+        
+                .div__logo{
+                    padding-left: 3%;
+        
+                    > img{
+                        height: 48px;
+                    }
+                }
+            }
+    
+            .conteneur1{
+                height: 200px;
+    
+                .div__info-profil{
+                    width: 70%;
+                    padding-left: 3%;
+    
+                    .nom{
+    
+                        > h1{
+                            font-size: 42px;
+                            line-height: 40px;
+                        }
+                    }
+    
+                    .ville{
+                        font-size: 18px;
+                    }
+    
+                    .phrase-intro{
+                        font-size: 18px;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+    
+                    .div__hashtags{
+    
+                        > div{
+                            font-size: 18px;
+                        }
+                    }
+                }
+    
+                .div__bouton{
+                    display: none;               
+                }
+    
+                .div__portrait{
+                    width: 30%;
+                    padding-right: 3%;
+    
+                    > img{
+                        height: 150px;
+                        width: 150px;                        
+                    }
+                }
+            }
+
+            .conteneur2{
+                margin-top: 20px;
+
+                .tri{
+                    display: none;
+                }
+    
+                .galerie{
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: space-around;
+        
+                    .galerie__ligne1, .galerie__ligne2{
+                        flex-direction: column;
+                        width: 45%;
+                        margin-bottom: 0px;
+        
+                        .poste__photo{
+                            width: 100%;
+                            margin-top: 10px;
+
+                            .div__img{
+                                height: 190px;
+                            }
+    
+                            img{
+                                height: 190px;
+                            }
+    
+                            .description__photo{
+                                width: 100%;
+                                padding-top: 10px;
+
+                                .nom__photo{
+                                    width: 85%;
+                                }
+    
+                                h2, p{
+                                    margin: 0;
+                                    font-size: 19px;
+                                }
+                            }
+                        }
+                    }       
+                }
+            }
+        }
+    }
+}
+
