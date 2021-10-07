@@ -53,16 +53,10 @@
             }
 
             .conteneur1{
-                padding-top: 200px;
                 width: 90%;
                 margin: auto;
-
-                .conteneur1_2{
-                    padding-top: 0px;
-                }
-        
-                .conteneur1_1, .conteneur1_2{
-                    flex-direction: column;
+                flex-direction: column;
+                padding-top: 0;
         
                     .div__photograph{
                         width: 100%;
@@ -88,7 +82,6 @@
                             }
                         }
                     }
-                }
             }
         }
     }
@@ -129,16 +122,11 @@
                 display: flex;
                 padding-top: 20px;
                 align-items: center;
+                flex-wrap: wrap;
         
-                .conteneur1_1, .conteneur1_2{
-                    flex-direction: column;
+                .div__photograph{
                     width: 50%;
-                    padding-top: 0px;
-        
-                    .div__photograph{
-                        width: 100%;
-                        margin-bottom: 30px;
-                    }
+                    margin-bottom: 30px;
                 }
             }
         }

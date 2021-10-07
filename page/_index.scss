@@ -63,21 +63,20 @@ body, .page{
     }
 
     .conteneur1{
-        padding-top: 160px;
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
 
-        .conteneur1_2{
-            padding-top: 50px;
-        }
 
-        .conteneur1_1, .conteneur1_2{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
 
-            .div__photograph{
+        .div__photograph{
                 width: 33%;
+                margin-top: 60px;
 
-                .div__portrait{
+            .div__portrait{
                     display: flex;
                     flex-direction: column;
                     color: $orange;
@@ -115,9 +114,9 @@ body, .page{
                             }
                         }
                     }
-                }
+            }
     
-                .div__info{
+            .div__info{
                     display: flex;
                     flex-direction: column;
                     padding-top: 5px;
@@ -146,9 +145,9 @@ body, .page{
                         padding-top: 3px;
                         font-size: 9px;
                     }
-                }
+            }
     
-                .div__hashtags{
+            .div__hashtags{
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -167,9 +166,9 @@ body, .page{
                         padding-left: 5px;
                         line-height: 20px;
                     }
-                }
             }
         }
+        
     }
 }
 

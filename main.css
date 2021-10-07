@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'DM-Sans';
   src: url("fonts/DMSans-Regular.ttf");
@@ -81,17 +82,13 @@ body, .page {
 }
 
 #block-page .conteneur1 {
-  padding-top: 160px;
-}
-
-#block-page .conteneur1 .conteneur1_2 {
-  padding-top: 50px;
-}
-
-#block-page .conteneur1 .conteneur1_1, #block-page .conteneur1 .conteneur1_2 {
+  width: 100%;
+  padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -99,11 +96,12 @@ body, .page {
           align-items: center;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph, #block-page .conteneur1 .conteneur1_2 .div__photograph {
+#block-page .conteneur1 .div__photograph {
   width: 33%;
+  margin-top: 60px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait {
+#block-page .conteneur1 .div__photograph .div__portrait {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +113,7 @@ body, .page {
   height: 250px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait > div, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait > div {
+#block-page .conteneur1 .div__photograph .div__portrait > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +125,7 @@ body, .page {
           align-items: center;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait > div > a > img, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait > div > a > img {
+#block-page .conteneur1 .div__photograph .div__portrait > div > a > img {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -135,24 +133,24 @@ body, .page {
   width: 190px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait .nom, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait .nom {
+#block-page .conteneur1 .div__photograph .div__portrait .nom {
   height: 45px;
   padding-top: 15px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait .nom > a, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait .nom > a {
+#block-page .conteneur1 .div__photograph .div__portrait .nom > a {
   text-decoration: none;
   color: #D3573C;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait .nom > a > h1, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait .nom > a > h1 {
+#block-page .conteneur1 .div__photograph .div__portrait .nom > a > h1 {
   font-family: 'DM-Sans';
   font-size: 36px;
   font-weight: normal;
   margin: 0px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__info, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__info {
+#block-page .conteneur1 .div__photograph .div__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +161,7 @@ body, .page {
   padding-top: 5px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__info > h3, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__info > h3 {
+#block-page .conteneur1 .div__photograph .div__info > h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,24 +173,24 @@ body, .page {
   font-weight: normal;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__info .ville, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__info .ville {
+#block-page .conteneur1 .div__photograph .div__info .ville {
   color: #901C1C;
   font-size: 13px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__info .phrase-intro, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__info .phrase-intro {
+#block-page .conteneur1 .div__photograph .div__info .phrase-intro {
   color: #0c0c0c;
   padding-top: 5px;
   font-size: 10px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__info .tarif, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__info .tarif {
+#block-page .conteneur1 .div__photograph .div__info .tarif {
   color: #929292;
   padding-top: 3px;
   font-size: 9px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__hashtags, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__hashtags {
+#block-page .conteneur1 .div__photograph .div__hashtags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,7 +203,7 @@ body, .page {
   padding-top: 8px;
 }
 
-#block-page .conteneur1 .conteneur1_1 .div__photograph .div__hashtags > div, #block-page .conteneur1 .conteneur1_2 .div__photograph .div__hashtags > div {
+#block-page .conteneur1 .div__photograph .div__hashtags > div {
   color: #901C1C;
   font-family: 'DM-Sans';
   font-weight: bold;
@@ -251,7 +249,7 @@ body, .page {
   padding-left: 2%;
 }
 
-.page .block-page .header .div__logo > img, .page body .header .div__logo > img {
+.page .block-page .header .div__logo img, .page body .header .div__logo img {
   width: 180px;
   height: 48px;
 }
@@ -373,6 +371,106 @@ body, .page {
   width: 90%;
   margin: auto;
   font-family: 'DM-Sans';
+}
+
+.page .block-page .conteneur2 .tri, .page body .conteneur2 .tri {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.page .block-page .conteneur2 .tri .div__titre__filtres, .page body .conteneur2 .tri .div__titre__filtres {
+  width: 10%;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres, .page body .conteneur2 .tri .div__filtres {
+  width: 15%;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav, .page body .conteneur2 .tri .div__filtres nav {
+  margin: 0 auto;
+  background-color: #901C1C;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul, .page body .conteneur2 .tri .div__filtres nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0px;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul li:hover .sous, .page body .conteneur2 .tri .div__filtres nav ul li:hover .sous {
+  display: block;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul .déroulant, .page body .conteneur2 .tri .div__filtres nav ul .déroulant {
+  float: left;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul .déroulant .sous, .page body .conteneur2 .tri .div__filtres nav ul .déroulant .sous {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  -webkit-box-shadow: 0px 1px 2px #CCC;
+          box-shadow: 0px 1px 2px #CCC;
+  background-color: #901C1C;
+  position: absolute;
+  padding-left: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul .déroulant .sous li, .page body .conteneur2 .tri .div__filtres nav ul .déroulant .sous li {
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul .déroulant .sous li a, .page body .conteneur2 .tri .div__filtres nav ul .déroulant .sous li a {
+  padding: 10px;
+  border-bottom: none;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul .déroulant .sous li a:hover, .page body .conteneur2 .tri .div__filtres nav ul .déroulant .sous li a:hover {
+  border-bottom: none;
+  background-color: black;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul .déroulant > a::after, .page body .conteneur2 .tri .div__filtres nav ul .déroulant > a::after {
+  content: "";
+  font-size: 14px;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav ul::after, .page body .conteneur2 .tri .div__filtres nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav a, .page body .conteneur2 .tri .div__filtres nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid white;
+  padding: 10px 0px;
+}
+
+.page .block-page .conteneur2 .tri .div__filtres nav a:hover, .page body .conteneur2 .tri .div__filtres nav a:hover {
+  border-bottom: 2px solid gold;
 }
 
 .page .block-page .conteneur2 .galerie .galerie__ligne1, .page .block-page .conteneur2 .galerie .galerie__ligne2, .page body .conteneur2 .galerie .galerie__ligne1, .page body .conteneur2 .galerie .galerie__ligne2 {
@@ -504,36 +602,31 @@ body, .page {
     margin: 0;
   }
   .page #block-page .conteneur1 {
-    padding-top: 200px;
     width: 90%;
     margin: auto;
-  }
-  .page #block-page .conteneur1 .conteneur1_2 {
-    padding-top: 0px;
-  }
-  .page #block-page .conteneur1 .conteneur1_1, .page #block-page .conteneur1 .conteneur1_2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 0;
   }
-  .page #block-page .conteneur1 .conteneur1_1 .div__photograph, .page #block-page .conteneur1 .conteneur1_2 .div__photograph {
+  .page #block-page .conteneur1 .div__photograph {
     width: 100%;
     margin-bottom: 20px;
   }
-  .page #block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait, .page #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait {
+  .page #block-page .conteneur1 .div__photograph .div__portrait {
     height: 245px;
   }
-  .page #block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait .nom, .page #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait .nom {
+  .page #block-page .conteneur1 .div__photograph .div__portrait .nom {
     height: 35px;
   }
-  .page #block-page .conteneur1 .conteneur1_1 .div__photograph .div__portrait .nom > h1, .page #block-page .conteneur1 .conteneur1_2 .div__photograph .div__portrait .nom > h1 {
+  .page #block-page .conteneur1 .div__photograph .div__portrait .nom > h1 {
     padding-top: 0px;
   }
-  .page #block-page .conteneur1 .conteneur1_1 .div__photograph .div__info, .page #block-page .conteneur1 .conteneur1_2 .div__photograph .div__info {
+  .page #block-page .conteneur1 .div__photograph .div__info {
     padding-top: 0px;
   }
-  .page #block-page .conteneur1 .conteneur1_1 .div__photograph .div__info .phrase-intro, .page #block-page .conteneur1 .conteneur1_2 .div__photograph .div__info .phrase-intro {
+  .page #block-page .conteneur1 .div__photograph .div__info .phrase-intro {
     padding-top: 2px;
   }
 }
@@ -575,17 +668,11 @@ body, .page {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .page #block-page .conteneur1 .conteneur1_1, .page #block-page .conteneur1 .conteneur1_2 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .page #block-page .conteneur1 .div__photograph {
     width: 50%;
-    padding-top: 0px;
-  }
-  .page #block-page .conteneur1 .conteneur1_1 .div__photograph, .page #block-page .conteneur1 .conteneur1_2 .div__photograph {
-    width: 100%;
     margin-bottom: 30px;
   }
 }

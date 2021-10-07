@@ -20,7 +20,7 @@
                 padding-top: 15px;
                 padding-left: 2%;
     
-                > img{
+                img{
                     width: 180px;
                     height: 48px;
                 }
@@ -127,6 +127,96 @@
             width: 90%;
             margin: auto;
             font-family: 'DM-Sans';
+
+            .tri{
+                display: flex;
+                justify-content: flex-start;
+
+                .div__titre__filtres{
+                    width: 10%;
+                }
+
+                .div__filtres{
+                    width: 15%;
+
+                    nav{
+                        margin: 0 auto;
+                        background-color: $rouge;
+                        position: sticky;
+                        top: 0px;
+
+                        ul{
+                            list-style-type: none;
+                            display: flex;
+                            justify-content: center;
+                            padding-left: 0px;
+
+                            li:hover .sous{
+                                display: block;
+                            }
+
+                            .déroulant{
+                                float: left;
+                                text-align: center;
+                                position: relative;
+                                width: 100%;
+
+                                .sous{
+                                    justify-content: center;
+                                    display: none;
+                                    box-shadow: 0px 1px 2px #CCC;
+                                    background-color: $rouge;
+                                    position: absolute;
+                                    padding-left: 0px;
+                                    width: 100%;
+                                    z-index: 100;
+
+                                    li{
+                                        float: none;
+                                        width: 100%;
+                                        text-align: center;
+
+                                        a{
+                                            padding: 10px;
+                                            border-bottom: none;
+                                        }
+
+                                        a:hover{
+                                            border-bottom: none;
+                                            background-color: black;
+                                        }
+                                    }
+                                }
+
+                                > a::after{
+                                    content: "";
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+
+
+                        ul::after{
+                            content: "";
+                            display: table;
+                            clear: both;
+                        }
+
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            color: white;
+                            border-bottom: 2px solid white;
+                            padding: 10px 0px;
+                        }
+
+                        a:hover{
+                            border-bottom: 2px solid gold;
+                        }
+                    }
+                }
+            }
 
             .galerie{
     

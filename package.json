@@ -1,0 +1,29 @@
+{
+  "name": "fisheye",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "dev": "webpack --mode=development",
+    "prod": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch",
+    "start" : "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gauthier59126/GauthierDelepoulle_6_16092021..git"
+  },
+  "author": "Gauthier DELEPOULLE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gauthier59126/GauthierDelepoulle_6_16092021./issues"
+  },
+  "homepage": "https://github.com/Gauthier59126/GauthierDelepoulle_6_16092021.#readme",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  }
+}
