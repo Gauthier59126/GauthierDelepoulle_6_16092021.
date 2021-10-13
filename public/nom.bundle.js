@@ -20,13 +20,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./js/page.js":
-/*!********************!*\
-  !*** ./js/page.js ***!
-  \********************/
+/***/ "./js/nom.js":
+/*!*******************!*\
+  !*** ./js/nom.js ***!
+  \*******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dataProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dataProvider */ \"./js/dataProvider.js\");\n\r\n\r\nconst photographId = new URL(location.href).searchParams.get('id');\r\nconsole.log('idPhotographe', photographId);\r\n\r\nlet photograph = null;\r\n\r\nconst nom = (data) => {\r\n    const divName = document.createElement(\"div\");\r\n    divName.className = \"nom\";\r\n\r\n    const textName = document.createElement(\"h1\");\r\n    textName.innerText = data.name;\r\n\r\n    divName.appendChild(textName);\r\n\r\n    return divName;\r\n}\r\n\r\nconst cityAndIntro = (data) => {\r\n    const divCityAndIntro = document.createElement(\"div\");\r\n    divCityAndIntro.className = \"div__ville__intro\";\r\n\r\n    const textCity = document.createElement(\"h3\");\r\n    textCity.className = \"ville\";\r\n    textCity.innerText = data.city +\", \"+  data.country;\r\n\r\n    const TextIntro = document.createElement(\"h3\");\r\n    TextIntro.className = \"phrase-intro\";\r\n    TextIntro.innerText = data.tagline;\r\n\r\n    divCityAndIntro.append(textCity, TextIntro);\r\n\r\n    return divCityAndIntro;\r\n}\r\n\r\nconst hashtag = (data) =>{\r\n    const divHashtag = document.createElement(\"div\");\r\n    divHashtag.className = \"div__hashtags\";\r\n\r\n    for (const tag of data.tags) {\r\n        const divTag = document.createElement(\"div\");\r\n        divTag.innerText = \"#\" + tag;\r\n\r\n        divHashtag.appendChild(divTag);\r\n    }\r\n\r\n    return divHashtag;\r\n}\r\n\r\nconst displayImagePhotograph = (data) =>{\r\n    const divImage = document.querySelector('.img__profile');\r\n    divImage.src = \"images/Photographers/\" + data.portrait;\r\n}\r\n \r\nconst displayInfoProfil = (data) => {\r\n    const divInfoProfil =  document.createElement(\"div\");\r\n    divInfoProfil.className = \"div__info-profil\";\r\n\r\n    const divName = nom(data);\r\n\r\n    const divCityAndIntro = cityAndIntro(data);\r\n\r\n    const divHashtag = hashtag(data);\r\n\r\n    divInfoProfil.append(divName, divCityAndIntro, divHashtag);\r\n\r\n    displayImagePhotograph(data);\r\n\r\n    return divInfoProfil;\r\n}\r\n\r\nconst conteneur = (data) => {\r\n    const conteneur1 = document.querySelector('.conteneur1');\r\n\r\n    const divInfoProfil = displayInfoProfil(data);\r\n\r\n    conteneur1.prepend(divInfoProfil);\r\n}\r\n\r\nconst getPhotographData = async() => {\r\n    photograph = await (0,_dataProvider__WEBPACK_IMPORTED_MODULE_0__.getPhotographById)(photographId);\r\n    conteneur(photograph);\r\n}\r\n\r\ngetPhotographData();\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://fisheye/./js/page.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dataProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dataProvider */ \"./js/dataProvider.js\");\n\r\n\r\nconst photographId = new URL(location.href).searchParams.get('id');\r\nconsole.log('idPhotographe', photographId);\r\n\r\nlet photograph = null;\r\n\r\nconst formName = (data) =>{\r\n\r\n    const formTitle = document.createElement(\"h1\");\r\n    formTitle.className = \"form-title\";\r\n    formTitle.innerText = \"Contactez-moi \"  + data.name;\r\n\r\n    return formTitle;\r\n}\r\n\r\nconst displayProfileName = (data) =>{\r\n    const divTitle = document.querySelector('.div-title')\r\n    \r\n    const formTitle = formName(data);\r\n\r\n    divTitle.prepend(formTitle);\r\n}\r\n\r\nconst getPhotographData = async() => {\r\n    photograph = await (0,_dataProvider__WEBPACK_IMPORTED_MODULE_0__.getPhotographById)(photographId);\r\n    displayProfileName(photograph);\r\n}\r\n\r\ngetPhotographData();\n\n//# sourceURL=webpack://fisheye/./js/nom.js?");
 
 /***/ })
 
@@ -90,7 +90,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dat
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./js/page.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./js/nom.js");
 /******/ 	
 /******/ })()
 ;

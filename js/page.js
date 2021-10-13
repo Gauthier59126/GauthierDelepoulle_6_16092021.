@@ -38,23 +38,12 @@ const hashtag = (data) =>{
     const divHashtag = document.createElement("div");
     divHashtag.className = "div__hashtags";
 
- //   const portrait = document.createElement("div");
-  //  portrait.innerText = "#portrait";
-
     for (const tag of data.tags) {
         const divTag = document.createElement("div");
         divTag.innerText = "#" + tag;
 
         divHashtag.appendChild(divTag);
     }
-
- //   const events = document.createElement("div");
- //   events.innerText = "#events";
-
-  //  const travel = document.createElement("div");
-  //  travel.innerText = "#travel";
-
-  //  divHashtag.append(portrait, events, travel);
 
     return divHashtag;
 }
@@ -88,6 +77,7 @@ const conteneur = (data) => {
 
     conteneur1.prepend(divInfoProfil);
 }
+
 const getPhotographData = async() => {
     photograph = await getPhotographById(photographId);
     conteneur(photograph);

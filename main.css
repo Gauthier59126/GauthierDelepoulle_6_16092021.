@@ -557,28 +557,6 @@ body, .page {
   height: 10px;
 }
 
-.error {
-  color: red;
-  font-size: 14px;
-  display: block;
-}
-
-.content {
-  margin: 5% auto;
-  width: 100%;
-  max-width: 500px;
-  -webkit-animation-name: modalopen;
-          animation-name: modalopen;
-  -webkit-animation-duration: var(--modal-duration);
-          animation-duration: var(--modal-duration);
-  background: #232323;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  padding-top: 10px;
-}
-
 .bground {
   display: none;
   position: fixed;
@@ -589,6 +567,134 @@ body, .page {
   width: 100%;
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
+}
+
+.bground .content {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: var(--modal-duration);
+          animation-duration: var(--modal-duration);
+  background: #DB8876;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.bground .content .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  color: white;
+}
+
+.bground .content .modal-body {
+  height: 600px;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  font-family: 'DM-Sans';
+}
+
+.bground .content .modal-body .form1 {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bground .content .modal-body .form1 .div-title {
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+
+.bground .content .modal-body .form1 .div-title .form-title {
+  font-size: 48px;
+  font-weight: normal;
+  color: black;
+  margin: 0;
+  line-height: 50px;
+}
+
+.bground .content .modal-body .form1 .formData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 10px;
+  color: #3f3f3f;
+}
+
+.bground .content .modal-body .form1 .formData .label__form {
+  font-size: 24px;
+  font-weight: normal;
+  display: inline-block;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.bground .content .modal-body .form1 .formData .text-control {
+  margin: 0;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 70%;
+  border: 0.8px solid #ccc;
+  outline: none;
+}
+
+.bground .content .modal-body .form1 .formData .error {
+  color: red;
+  font-size: 14px;
+  display: block;
+}
+
+.bground .content .modal-body .form1 .formData--modif {
+  height: 130px;
+}
+
+.bground .content .modal-body .form1 .div-btn {
+  padding-top: 15px;
+}
+
+.bground .content .modal-body .form1 .div-btn .btn-submit {
+  height: 50px;
+  width: 20%;
+  background: #901C1C;
+  display: block;
+  margin: 0;
+  border-radius: 3px;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'DM-Sans';
 }
 
 .diapo {

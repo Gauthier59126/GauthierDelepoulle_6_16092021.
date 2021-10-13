@@ -110,6 +110,10 @@
                   <span class="close"></span>
                   <div class="modal-body">
                     <form class="form1" name="reserve" action="index.html" method="get" onsubmit="return validate();">
+                        <div class="div-title">
+                          <!--  
+                            <h1 class="form-title">Contactez-moi </h1>-->
+                        </div>                      
                       <div class="formData">  
                         <label for="first"  class="label__form">Prénom</label><br>
                         <input class="text-control" type="text" id="first" name="first" minlength="2"/><br>
@@ -122,23 +126,15 @@
                       </div>
                       <div class="formData">
                         <label for="email" class="label__form">E-mail</label><br>
-                        <input class="textcontrol" type="email" id="email" name="email"/><br>
+                        <input class="text-control" type="email" id="email" name="email"/><br>
                         <small class="error email"></small>
                       </div>
-                      <div class="formData">
-                        <label  for="birthdate" class="label__form">Date de naissance</label><br>
-                        <input class="text-control" type="date" id="birthdate" name="birthdate"/><br>
-                        <small class="error birthdate"></small>
+                      <div class="formData formData--modif">
+                        <label for="message" class="label__form">Votre message</label><br>
+                        <input class="text-control" type="message" id="message" name="message"/><br>
+                        <small class="error message"></small>
                       </div>
-                      <div class="formData">
-                        <label  for="quantity" class="label__form">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                        <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99"><br>
-                        <small class="error quantity"></small>
-                      </div>
-
-        
-
-                      <input class="btn-submit button" type="submit" value="C'est parti"/>
+                      <div class="div-btn"><input class="btn-submit button" type="submit" value="Envoyer"/></div>
                     </form>
                   </div>
                 </div>
@@ -201,4 +197,5 @@
     </body>
     <script src="./js/formulaire.js"></script>
     <script src="public/page.bundle.js"></script>
+    <script src="public/nom.bundle.js"></script>
 </html>
