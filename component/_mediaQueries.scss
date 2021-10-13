@@ -251,7 +251,7 @@
                     left: 49px;
                     
                     button{
-                        height: 33px;
+                        height: 36px;
                         font-size: 18px;
                     }
                 }
@@ -311,6 +311,71 @@
                     }       
                 }
             }
+
+            .bground{
+            
+                .content {
+                    width: 375px;
+                    padding-top: 0px;
+                        
+                    .close {
+                        transform: scale(1);
+                    }
+            
+                    .modal-body{
+                        height: 630px;
+                        width: 90%;
+                        align-items: center;
+                        margin: auto;
+                        font-family: 'DM-Sans';
+            
+                        .form1{
+            
+                            .div-title{
+                                padding-top: 20px;
+            
+                                .form-title{
+                                    font-size: 38px;
+                                    line-height: 43px;
+                                }
+                            }
+            
+                            .formData{
+                                height: 75px;
+            
+                                .label__form{
+                                    font-size: 20px;
+                                    margin-top: 0px;
+                                    margin-bottom: 0px;
+                                }
+
+                                .error{
+                                    font-size: 15px;
+                                    left: 90px;
+                                    bottom: 14px;
+                                }
+            
+                                .error--message {
+                                    left: 150px;
+                                }
+                            }
+            
+                            .formData--modif{
+                                height: 150px;
+                            }
+            
+                            .div-btn{
+                                display: flex;
+                                justify-content: center;
+            
+                                .btn-submit {
+                                    height: 44px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -336,10 +401,11 @@
             }
     
             .conteneur1{
-                height: 200px;
+                width: 86%;
+                height: 230px;
     
                 .div__info-profil{
-                    width: 70%;
+                    width: 50%;
                     padding-left: 3%;
     
                     .nom{
@@ -370,9 +436,26 @@
                     }
                 }
 
+                .div__bouton{
+                    position: relative;
+                    width: 200px;
+                    top: 135px;
+                    right: 10px;
+                    
+                    button{
+                        width: 230px;
+                        height: 36px;
+                        font-size: 18px;
+                    }
+                }
+
                 .div__portrait{
-                    width: 30%;
-                    padding-right: 3%;
+                    position: relative;
+                    right: 185px;
+                    width: 50%;
+                    padding-right: 8%;
+                    padding-bottom: 6%;
+                    justify-content: center;
     
                     > img{
                         height: 150px;

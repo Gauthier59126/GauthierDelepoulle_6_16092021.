@@ -350,6 +350,7 @@ body, .page {
   color: white;
   border: none;
   cursor: pointer;
+  min-width: 130px;
 }
 
 .page .block-page .conteneur1 .div__portrait, .page body .conteneur1 .div__portrait {
@@ -566,7 +567,7 @@ body, .page {
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(26, 39, 156, 0.4);
+  background: rgba(196, 196, 196, 0.4);
 }
 
 .bground .content {
@@ -585,21 +586,39 @@ body, .page {
   padding-top: 10px;
 }
 
+.bground .content .close:before, .bground .content .close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: white;
+}
+
+.bground .content .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.bground .content .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .bground .content .close {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 20px;
+  top: 30px;
   width: 32px;
   height: 32px;
   opacity: 1;
   cursor: pointer;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-  color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .bground .content .modal-body {
-  height: 600px;
+  height: 650px;
   width: 90%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -620,7 +639,7 @@ body, .page {
 }
 
 .bground .content .modal-body .form1 .div-title {
-  padding-top: 15px;
+  padding-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -636,7 +655,7 @@ body, .page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
+  height: 90px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -656,7 +675,7 @@ body, .page {
 .bground .content .modal-body .form1 .formData .text-control {
   margin: 0;
   padding: 5px;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 20px;
   height: 70%;
   border: 0.8px solid #ccc;
@@ -664,13 +683,21 @@ body, .page {
 }
 
 .bground .content .modal-body .form1 .formData .error {
-  color: red;
-  font-size: 14px;
+  color: blue;
+  font-size: 18px;
   display: block;
+  line-height: 1px;
+  position: relative;
+  left: 110px;
+  bottom: 17px;
+}
+
+.bground .content .modal-body .form1 .formData .error--message {
+  left: 195px;
 }
 
 .bground .content .modal-body .form1 .formData--modif {
-  height: 130px;
+  height: 150px;
 }
 
 .bground .content .modal-body .form1 .div-btn {
@@ -680,6 +707,7 @@ body, .page {
 .bground .content .modal-body .form1 .div-btn .btn-submit {
   height: 50px;
   width: 20%;
+  font-size: 16px;
   background: #901C1C;
   display: block;
   margin: 0;
@@ -977,7 +1005,7 @@ body, .page {
     left: 49px;
   }
   .page .block-page .conteneur1 .div__bouton button {
-    height: 33px;
+    height: 36px;
     font-size: 18px;
   }
   .page .block-page .conteneur1 .div__portrait {
@@ -1024,6 +1052,60 @@ body, .page {
     margin: 0;
     font-size: 14px;
   }
+  .page .block-page .bground .content {
+    width: 375px;
+    padding-top: 0px;
+  }
+  .page .block-page .bground .content .close {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .page .block-page .bground .content .modal-body {
+    height: 630px;
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    font-family: 'DM-Sans';
+  }
+  .page .block-page .bground .content .modal-body .form1 .div-title {
+    padding-top: 20px;
+  }
+  .page .block-page .bground .content .modal-body .form1 .div-title .form-title {
+    font-size: 38px;
+    line-height: 43px;
+  }
+  .page .block-page .bground .content .modal-body .form1 .formData {
+    height: 75px;
+  }
+  .page .block-page .bground .content .modal-body .form1 .formData .label__form {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .page .block-page .bground .content .modal-body .form1 .formData .error {
+    font-size: 15px;
+    left: 90px;
+    bottom: 14px;
+  }
+  .page .block-page .bground .content .modal-body .form1 .formData .error--message {
+    left: 150px;
+  }
+  .page .block-page .bground .content .modal-body .form1 .formData--modif {
+    height: 150px;
+  }
+  .page .block-page .bground .content .modal-body .form1 .div-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page .block-page .bground .content .modal-body .form1 .div-btn .btn-submit {
+    height: 44px;
+  }
 }
 
 @media all and (min-width: 376px) and (max-width: 768px) {
@@ -1038,10 +1120,11 @@ body, .page {
     height: 48px;
   }
   .page .block-page .conteneur1 {
-    height: 200px;
+    width: 86%;
+    height: 230px;
   }
   .page .block-page .conteneur1 .div__info-profil {
-    width: 70%;
+    width: 50%;
     padding-left: 3%;
   }
   .page .block-page .conteneur1 .div__info-profil .nom {
@@ -1063,9 +1146,26 @@ body, .page {
   .page .block-page .conteneur1 .div__info-profil .div__hashtags > div {
     font-size: 18px;
   }
+  .page .block-page .conteneur1 .div__bouton {
+    position: relative;
+    width: 200px;
+    top: 135px;
+    right: 10px;
+  }
+  .page .block-page .conteneur1 .div__bouton button {
+    width: 230px;
+    height: 36px;
+    font-size: 18px;
+  }
   .page .block-page .conteneur1 .div__portrait {
-    width: 30%;
-    padding-right: 3%;
+    position: relative;
+    right: 185px;
+    width: 50%;
+    padding-right: 8%;
+    padding-bottom: 6%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .page .block-page .conteneur1 .div__portrait > img {
     height: 150px;
