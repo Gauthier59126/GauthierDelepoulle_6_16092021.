@@ -189,13 +189,15 @@
         
             .header{
                 height: 50px;
-                padding-top: 20px;
+                padding-top: 10px;
+                margin-bottom: 10px;
         
                 .div__logo{
+                    padding-left: 0%;
         
-                    > img{
-                        width: 130px;
-                        height: 37px;
+                    img{
+                        width: 150px;
+                        height: 40px;
                     }
                 }
             }
@@ -203,12 +205,16 @@
             .conteneur1{
                 height: 160px;
                 background-color: white;
+                margin-bottom: 20px;
     
                 .div__info-profil{
                     width: 70%;
                     padding-left: 0%;
+                    min-width: 0;
     
                     .nom{
+                        line-height: 0px;
+                        padding-bottom: 5px;
     
                         > h1{
                             font-size: 36px;
@@ -239,11 +245,21 @@
                 }
     
                 .div__bouton{
-                    display: none;               
+                    position: fixed;
+                    width: 200px;
+                    bottom: -80px;
+                    left: 49px;
+                    
+                    button{
+                        height: 33px;
+                        font-size: 18px;
+                    }
                 }
     
                 .div__portrait{
                     width: 30%;
+                    padding-bottom: 55px;
+                    padding-right: 0%;
     
                     > img{
                         height: 100px;
@@ -327,6 +343,8 @@
                     padding-left: 3%;
     
                     .nom{
+                        line-height: 0px;
+                        padding-bottom: 5px;
     
                         > h1{
                             font-size: 42px;
@@ -353,7 +371,7 @@
                 }
     
                 .div__bouton{
-                    display: none;               
+                                 
                 }
     
                 .div__portrait{

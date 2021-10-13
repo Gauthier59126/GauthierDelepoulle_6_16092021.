@@ -4,6 +4,7 @@ const path = require("path");
 let config = {
     entry:{
         "index" : "./js/index.js",
+        "page" : "./js/page.js",
     } ,
     output: {
       path: path.resolve(__dirname, "./public"),

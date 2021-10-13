@@ -7,7 +7,7 @@ const portrait = (data) => {
     const divImage =  document.createElement("div");
 
     const linkPhotograph =  document.createElement("a");
-    linkPhotograph.href = "Mimi-Keel.html?id=" +data.id;
+    linkPhotograph.href = "page_photographe.html?id=" +data.id;
 
     const subName = data.name.split(" ")[0];
 
@@ -23,7 +23,7 @@ const portrait = (data) => {
     nom.className = "nom";
 
     const linkPhotograph2 =  document.createElement("a");
-    linkPhotograph2.href = "Mimi-Keel.html?id=" +data.id;
+    linkPhotograph2.href = "page_photographe.html?id=" +data.id;
 
     const namePhotograph = document.createElement("h1");
     namePhotograph.innerText = data.name;
@@ -99,8 +99,8 @@ const displayPhotograph = (data) => {
 
     divPhotograph.append(divPortrait, divInfo, divHashtag);
 
-    const conteneur11 = document.querySelector('.conteneur1_1');
-    conteneur11.append(divPhotograph);
+    const conteneur1 = document.querySelector('.conteneur1');
+    conteneur1.append(divPhotograph);
 }
 
 const getPhotographData = async () => {

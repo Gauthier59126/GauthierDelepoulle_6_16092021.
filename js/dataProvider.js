@@ -18,6 +18,15 @@ export const getPhotograph = async () =>{
     return data?.photographers;
 }
 
+export const getPhotographById = async (id) => {
+    const allPhotographers = await getPhotograph();
+    const photograph = allPhotographers.find((onePhotograph) =>{
+        return onePhotograph.id == id;
+    })
+
+    return photograph;
+}
+
 const test = async () =>{
     const photograph = await getPhotograph ();
     console.log(photograph);

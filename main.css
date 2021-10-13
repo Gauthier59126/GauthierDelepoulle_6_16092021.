@@ -83,7 +83,7 @@ body, .page {
 
 #block-page .conteneur1 {
   width: 100%;
-  padding-top: 20px;
+  padding-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,6 +275,12 @@ body, .page {
 .page .block-page .conteneur1 .div__info-profil, .page body .conteneur1 .div__info-profil {
   width: 30%;
   padding-left: 5%;
+  min-width: 378px;
+}
+
+.page .block-page .conteneur1 .div__info-profil .nom, .page body .conteneur1 .div__info-profil .nom {
+  line-height: 65px;
+  padding-bottom: 10px;
 }
 
 .page .block-page .conteneur1 .div__info-profil .nom > h1, .page body .conteneur1 .div__info-profil .nom > h1 {
@@ -357,6 +363,7 @@ body, .page {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 2%;
 }
 
 .page .block-page .conteneur1 .div__portrait > img, .page body .conteneur1 .div__portrait > img {
@@ -550,6 +557,92 @@ body, .page {
   height: 10px;
 }
 
+.error {
+  color: red;
+  font-size: 14px;
+  display: block;
+}
+
+.content {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: var(--modal-duration);
+          animation-duration: var(--modal-duration);
+  background: #232323;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.bground {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
+.diapo {
+  position: relative;
+  overflow: hidden;
+}
+
+#nav-droite, #nav-gauche {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: white;
+  font-size: 3em;
+}
+
+#nav-droite {
+  right: 20px;
+}
+
+#nav-gauche {
+  left: 20px;
+}
+
+.elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.element {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: relative;
+}
+
+.element > img {
+  width: 100%;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 30px;
+}
+
 @media all and (max-width: 375px) {
   .page {
     width: 375px;
@@ -729,19 +822,29 @@ body, .page {
   }
   .page .block-page .header {
     height: 50px;
-    padding-top: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
   }
-  .page .block-page .header .div__logo > img {
-    width: 130px;
-    height: 37px;
+  .page .block-page .header .div__logo {
+    padding-left: 0%;
+  }
+  .page .block-page .header .div__logo img {
+    width: 150px;
+    height: 40px;
   }
   .page .block-page .conteneur1 {
     height: 160px;
     background-color: white;
+    margin-bottom: 20px;
   }
   .page .block-page .conteneur1 .div__info-profil {
     width: 70%;
     padding-left: 0%;
+    min-width: 0;
+  }
+  .page .block-page .conteneur1 .div__info-profil .nom {
+    line-height: 0px;
+    padding-bottom: 5px;
   }
   .page .block-page .conteneur1 .div__info-profil .nom > h1 {
     font-size: 36px;
@@ -762,10 +865,19 @@ body, .page {
     display: none;
   }
   .page .block-page .conteneur1 .div__bouton {
-    display: none;
+    position: fixed;
+    width: 200px;
+    bottom: -80px;
+    left: 49px;
+  }
+  .page .block-page .conteneur1 .div__bouton button {
+    height: 33px;
+    font-size: 18px;
   }
   .page .block-page .conteneur1 .div__portrait {
     width: 30%;
+    padding-bottom: 55px;
+    padding-right: 0%;
   }
   .page .block-page .conteneur1 .div__portrait > img {
     height: 100px;
@@ -826,6 +938,10 @@ body, .page {
     width: 70%;
     padding-left: 3%;
   }
+  .page .block-page .conteneur1 .div__info-profil .nom {
+    line-height: 0px;
+    padding-bottom: 5px;
+  }
   .page .block-page .conteneur1 .div__info-profil .nom > h1 {
     font-size: 42px;
     line-height: 40px;
@@ -840,9 +956,6 @@ body, .page {
   }
   .page .block-page .conteneur1 .div__info-profil .div__hashtags > div {
     font-size: 18px;
-  }
-  .page .block-page .conteneur1 .div__bouton {
-    display: none;
   }
   .page .block-page .conteneur1 .div__portrait {
     width: 30%;

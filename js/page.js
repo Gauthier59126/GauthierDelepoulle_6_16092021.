@@ -1,9 +1,16 @@
+import {getPhotographById} from './dataProvider';
+
+const photographId = new URL(location.href).searchParams.get('id');
+console.log('idPhotographe', photographId);
+
+let photograph = null;
+
 const nom = (data) => {
     const divName = document.createElement("div");
     divName.className = "nom";
 
     const textName = document.createElement("h1");
-    textName.innerText ='Mimi Keel';
+    textName.innerText = data.name;
 
     divName.appendChild(textName);
 
@@ -16,11 +23,11 @@ const cityAndIntro = (data) => {
 
     const textCity = document.createElement("h3");
     textCity.className = "ville";
-    textCity.innerText = "London, UK";
+    textCity.innerText = data.city +", "+  data.country;
 
     const TextIntro = document.createElement("h3");
     TextIntro.className = "phrase-intro";
-    TextIntro.innerText = "Voir le beau dans le quotidien";
+    TextIntro.innerText = data.tagline;
 
     divCityAndIntro.append(textCity, TextIntro);
 
@@ -31,20 +38,32 @@ const hashtag = (data) =>{
     const divHashtag = document.createElement("div");
     divHashtag.className = "div__hashtags";
 
-    const portrait = document.createElement("div");
-    portrait.innerText = "#portrait";
+ //   const portrait = document.createElement("div");
+  //  portrait.innerText = "#portrait";
 
-    const events = document.createElement("div");
-    events.innerText = "#events";
+    for (const tag of data.tags) {
+        const divTag = document.createElement("div");
+        divTag.innerText = "#" + tag;
 
-    const travel = document.createElement("div");
-    travel.innerText = "#travel";
+        divHashtag.appendChild(divTag);
+    }
 
-    divHashtag.append(portrait, events, travel);
+ //   const events = document.createElement("div");
+ //   events.innerText = "#events";
+
+  //  const travel = document.createElement("div");
+  //  travel.innerText = "#travel";
+
+  //  divHashtag.append(portrait, events, travel);
 
     return divHashtag;
 }
 
+const displayImagePhotograph = (data) =>{
+    const divImage = document.querySelector('.img__profile');
+    divImage.src = "images/Photographers/" + data.portrait;
+}
+ 
 const displayInfoProfil = (data) => {
     const divInfoProfil =  document.createElement("div");
     divInfoProfil.className = "div__info-profil";
@@ -57,6 +76,8 @@ const displayInfoProfil = (data) => {
 
     divInfoProfil.append(divName, divCityAndIntro, divHashtag);
 
+    displayImagePhotograph(data);
+
     return divInfoProfil;
 }
 
@@ -67,5 +88,12 @@ const conteneur = (data) => {
 
     conteneur1.prepend(divInfoProfil);
 }
+const getPhotographData = async() => {
+    photograph = await getPhotographById(photographId);
+    conteneur(photograph);
+}
 
-conteneur();
+getPhotographData();
+
+
+

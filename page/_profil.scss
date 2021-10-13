@@ -41,8 +41,11 @@
             .div__info-profil{
                 width: 30%;
                 padding-left: 5%;
+                min-width: 378px ;
 
                 .nom{
+                    line-height: 65px;
+                    padding-bottom: 10px;
 
                     > h1{
                         font-size: 64px;
@@ -112,6 +115,7 @@
                 width: 45%;
                 justify-content: flex-end;
                 align-items: center;
+                padding-right: 2%;
 
                 > img{
                     border-radius: 50%;
@@ -282,4 +286,86 @@
             }
         }
     }
+}
+
+
+
+// Formulaire de contact
+.error{
+    color: red;
+    font-size: 14px;
+    display: block;
+  }
+
+  .content {
+    margin: 5% auto;
+    width: 100%;
+    max-width: 500px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    background: #232323;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding-top: 10px;
+  } 
+
+.bground{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(26, 39, 156, 0.4);
+  }
+
+
+//diapo images
+
+.diapo{
+    position: relative;
+    overflow: hidden;
+}
+
+#nav-droite, #nav-gauche{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3em;
+}
+
+#nav-droite{
+    right: 20px;
+}
+#nav-gauche{
+    left: 20px;
+}
+
+.elements{
+    display: flex;
+    transition: 1s linear;
+}
+
+.element{
+    flex: 1 0 100%;
+    position: relative;
+}
+
+.element > img{
+    width: 100%;
+}
+
+.caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255,255,255,0.4);
+    padding: 30px;
 }
