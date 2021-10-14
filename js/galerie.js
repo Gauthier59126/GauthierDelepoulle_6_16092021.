@@ -1,9 +1,11 @@
-import {getPhotographById} from './dataProvider';
+import {getPhotographById, getMediaByPhotographer} from './dataProvider';
+import MediaFactory from './mediaFactory';
 
 const photographId = new URL(location.href).searchParams.get('id');
 console.log('idPhotographe', photographId);
 
 let photograph = null;
+let medias = [];
 
 const title = (data) =>{
     const imageDivName = document.createElement("div");
@@ -33,8 +35,8 @@ const likeIcone = (data) =>{
     const divLikeIcon = document.createElement("div");
     divLikeIcon.className = "icone__like";
 
-    const likeIcone = document.createElement("h2");
-    likeIcone.innerText = "";
+    const likeIcone = document.createElement("i");
+    likeIcone.className = "fas fa-heart";
 
     divLikeIcon.appendChild(likeIcone);
 
@@ -55,8 +57,15 @@ const displayImageInfo = (data) =>{
 }
 
 const displayImage = (data) =>{
-    const divImage = document.querySelector('.div__img');
-    divImage.src = "images/images/" + data.id;
+    const divImage = document.createElement("div");
+    divImage.className = "div__img";
+
+    const image = document.createElement("img")
+    image.src = "images/images/" + data.image;
+
+    divImage.appendChild(image);
+
+    return divImage;
 }
 
 const displayImagePost = (data) =>{
@@ -72,19 +81,27 @@ const displayImagePost = (data) =>{
     return divImagePost;
 }
 
-const displayGalerie = (data) =>{
+const displayGalerie = (mediasArray) =>{
     const galerie = document.querySelector(".galerie");
 
-    const divImagePost = displayImagePost(data);
-
-    galerie.prepend(divImagePost);
+    for (const media of mediasArray) {
+        const mediaType = media.image != null?"image":"video";
+        const divImagePost = new MediaFactory(mediaType, media);
+        if (mediaType== "image") {
+            console.log(divImagePost, mediaType);
+            divImagePost.appendTo(galerie);
+        }
+        
+       // galerie.prepend(divImagePost);
+    }
 }
 
-const getPhotographData = async() => {
-    photograph = await getPhotographById(photographId);
-    displayGalerie(photograph);
+const getMedias =  async() => {
+    medias = await getMediaByPhotographer(photographId);
+    console.log("medias :",medias);
+    displayGalerie(medias);
 }
 
-getPhotographData();
+getMedias();
 
 

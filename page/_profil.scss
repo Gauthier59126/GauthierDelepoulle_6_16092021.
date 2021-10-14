@@ -287,6 +287,43 @@
                 }
             }
         }
+
+        .div__tarif-like{
+            width: 25%;
+            position: fixed;
+            background-color: $background-orange;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'DM-Sans';
+            max-width: 370px;
+            min-width: 310px;
+            font-size: 16px;
+            border-radius: 5px;
+            bottom: 0px;
+            right: 50px;
+            z-index: 10;
+
+            .div__nb-like{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h2{
+                    margin-right: 10px;
+                }
+
+                i{
+                    font-size: 20px;
+                }
+            }
+
+            .div__tarif{
+                width: 45%;
+            }
+
+        }
     }
 }
 

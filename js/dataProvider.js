@@ -28,7 +28,7 @@ export const getPhotographById = async (id) => {
 }
 
 
-
+// export images
 export const getImage = async () =>{
     const data = await getData();
     return data?.media;
@@ -42,6 +42,15 @@ export const getImageById = async (id) =>{
 
     return image;
 }
+
+export const getMediaByPhotographer = async (id) => {
+    const data = await getData();
+    const medias = data.media.filter((media) => 
+        media.photographerId == id 
+    )   
+    return medias;
+}
+
 
 const test = async () =>{
     const photograph = await getPhotograph ();

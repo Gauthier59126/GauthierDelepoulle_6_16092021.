@@ -22,9 +22,28 @@ const displayProfileName = (data) =>{
     divTitle.prepend(formTitle);
 }
 
+//price
+const price = (data) => {
+    const  txtPrice = document.createElement("h2");
+    txtPrice.innerText = data.price +"€ / jour";
+    
+    return txtPrice;
+}
+
+const displayPrice = (data) => {
+    const divPrice = document.querySelector(".div__tarif");
+    
+    const txtPrice = price(data);
+
+    divPrice.prepend(txtPrice);
+}
+
 const getPhotographData = async() => {
     photograph = await getPhotographById(photographId);
     displayProfileName(photograph);
+    displayPrice(photograph);
 }
 
 getPhotographData();
+
+

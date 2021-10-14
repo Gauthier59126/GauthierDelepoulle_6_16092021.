@@ -562,6 +562,54 @@ body, .page {
   height: 10px;
 }
 
+.page .block-page .div__tarif-like, .page body .div__tarif-like {
+  width: 25%;
+  position: fixed;
+  background-color: #DB8876;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'DM-Sans';
+  max-width: 370px;
+  min-width: 310px;
+  font-size: 16px;
+  border-radius: 5px;
+  bottom: 0px;
+  right: 50px;
+  z-index: 10;
+}
+
+.page .block-page .div__tarif-like .div__nb-like, .page body .div__tarif-like .div__nb-like {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page .block-page .div__tarif-like .div__nb-like h2, .page body .div__tarif-like .div__nb-like h2 {
+  margin-right: 10px;
+}
+
+.page .block-page .div__tarif-like .div__nb-like i, .page body .div__tarif-like .div__nb-like i {
+  font-size: 20px;
+}
+
+.page .block-page .div__tarif-like .div__tarif, .page body .div__tarif-like .div__tarif {
+  width: 45%;
+}
+
 .bground {
   display: none;
   position: fixed;
@@ -1057,6 +1105,9 @@ body, .page {
   .page .block-page .conteneur2 .galerie .poste__photo .description__photo h2, .page .block-page .conteneur2 .galerie .poste__photo .description__photo p {
     margin: 0;
     font-size: 14px;
+  }
+  .page .block-page .div__tarif-like {
+    display: none;
   }
   .page .block-page .bground .content {
     width: 375px;
