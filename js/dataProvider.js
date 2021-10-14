@@ -27,9 +27,28 @@ export const getPhotographById = async (id) => {
     return photograph;
 }
 
+
+
+export const getImage = async () =>{
+    const data = await getData();
+    return data?.media;
+}
+
+export const getImageById = async (id) =>{
+    const allImages = await getImage();
+    const image = allImages.find((oneImage) =>{
+        return oneImage.id == id;
+    })
+
+    return image;
+}
+
 const test = async () =>{
     const photograph = await getPhotograph ();
     console.log(photograph);
+
+    const image = await getImage();
+    console.log(image);
 }
 
 test();

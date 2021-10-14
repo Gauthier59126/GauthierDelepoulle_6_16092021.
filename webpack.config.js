@@ -6,6 +6,7 @@ let config = {
         "index" : "./js/index.js",
         "page" : "./js/page.js",
         "nom" : "./js/nom.js",
+        "galerie": "./js/galerie.js",
     } ,
     output: {
       path: path.resolve(__dirname, "./public"),

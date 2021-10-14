@@ -276,36 +276,35 @@
     
                 .galerie{
                     margin-bottom: 20px;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 0px;
+                    margin: auto;
         
-                    .galerie__ligne1, .galerie__ligne2{
-                        flex-direction: column;
+                    .poste__photo{
                         width: 100%;
+                        margin-top: 10px;
                         margin-bottom: 0px;
-        
-                        .poste__photo{
+
+                        .div__img{
+                            height: 190px;
+                        }
+    
+                        img{
+                            height: 190px;
+                        }
+    
+                        .description__photo{
                             width: 100%;
-                            margin-top: 10px;
+                            padding-top: 10px;
 
-                            .div__img{
-                                height: 190px;
+                            .nom__photo{
+                                width: 85%;
                             }
     
-                            img{
-                                height: 190px;
-                            }
-    
-                            .description__photo{
-                                width: 100%;
-                                padding-top: 10px;
-
-                                .nom__photo{
-                                    width: 85%;
-                                }
-    
-                                h2, p{
-                                    margin: 0;
-                                    font-size: 14px;
-                                }
+                            h2, p{
+                                margin: 0;
+                                font-size: 14px;
                             }
                         }
                     }       
@@ -472,39 +471,37 @@
                 }
     
                 .galerie{
+                    margin: auto;
                     margin-bottom: 20px;
                     display: flex;
-                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    width: 95%;
+                    margin-bottom: 0px;
         
-                    .galerie__ligne1, .galerie__ligne2{
-                        flex-direction: column;
+                    .poste__photo{
                         width: 45%;
-                        margin-bottom: 0px;
-        
-                        .poste__photo{
+                        margin-top: 10px;
+
+                        .div__img{
+                            height: 190px;
+                        }
+    
+                        img{
+                            height: 190px;
+                        }
+    
+                        .description__photo{
                             width: 100%;
-                            margin-top: 10px;
+                            padding-top: 10px;
 
-                            .div__img{
-                                height: 190px;
+                            .nom__photo{
+                                width: 85%;
                             }
     
-                            img{
-                                height: 190px;
-                            }
-    
-                            .description__photo{
-                                width: 100%;
-                                padding-top: 10px;
-
-                                .nom__photo{
-                                    width: 85%;
-                                }
-    
-                                h2, p{
-                                    margin: 0;
+                            h2, p{
+                                margin: 0;
                                     font-size: 19px;
-                                }
                             }
                         }
                     }       

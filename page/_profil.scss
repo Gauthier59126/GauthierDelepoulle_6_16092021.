@@ -136,6 +136,7 @@
             .tri{
                 display: flex;
                 justify-content: flex-start;
+                margin-bottom: 20px;
 
                 .div__titre__filtres{
                     width: 10%;
@@ -224,62 +225,62 @@
             }
 
             .galerie{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 35px;
+                    
     
-                .galerie__ligne1, .galerie__ligne2{
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 35px;
-    
-                    .poste__photo{
-                        width: 27%;
+                .poste__photo{
+                    width: 27%;
+                    margin-bottom: 25px;
 
-                        img{
-                            width: 100%;
-                            height: 324px;
-                            border-radius: 6px;
-                            object-fit: cover;
+                    img{
+                        width: 100%;
+                        height: 324px;
+                        border-radius: 6px;
+                        object-fit: cover;
+                    }
+
+                    .description__photo{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        .nom__photo{
+                            width: 84%;
+
+                            > h2{
+                                font-weight: normal;
+                                color: $rouge;
+                            }
                         }
 
-                        .description__photo{
-                            width: 100%;
+                        .nb__like{
+                            width: 8%;
                             display: flex;
-                            align-items: center;
+                            justify-content: center;
 
-                            .nom__photo{
-                                width: 84%;
-
-                                > h2{
-                                    font-weight: normal;
-                                    color: $rouge;
-                                }
-                            }
-
-                            .nb__like{
-                                width: 8%;
-                                display: flex;
-                                justify-content: center;
-
-                                > p{
-                                    font-weight: 400;
-                                    color: $rouge;
-                                }
-                            }
-
-                            h2, p{
-                                margin: 0;
-                                font-size: 24px;
-                            }
-
-                            .icone__like{
-                                width: 8%;
-                                display: flex;
-                                justify-content: center;
+                            > p{
+                                font-weight: 400;
                                 color: $rouge;
+                            }
+                        }
 
-                                .fas.fa-heart.fa-lg{
-                                    width: 10px;
-                                    height: 10px;
-                                }
+                        h2, p{
+                            margin: 0;
+                            font-size: 24px;
+                        }
+
+                        .icone__like{
+                            width: 8%;
+                            display: flex;
+                            justify-content: center;
+                            color: $rouge;
+
+                            .fas.fa-heart.fa-lg{
+                                width: 10px;
+                                height: 10px;
                             }
                         }
                     }
@@ -404,10 +405,12 @@
                         position: relative;
                         left: 110px;
                         bottom: 17px;
+                        font-style: italic;
                     }
 
                     .error--message {
                         left: 195px;
+                        padding-bottom: 2px;
                     }
                 }
 
