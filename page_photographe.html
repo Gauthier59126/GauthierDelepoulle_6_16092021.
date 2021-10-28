@@ -28,6 +28,12 @@
                         <div class="animals">#animals</div>
                     </div>
                 </div>-->
+                <select class="sous">
+                    <option ></option>
+                    <option value="popularite" >Popularité</option>
+                    <option value="date">Date</option>
+                    <option value="titre">Titre</option>
+                </select>
                 <div class="div__bouton"><button class="btn-signup modal-btn">Contactez-moi</button></div>
                 <div class="div__portrait"><img class="img__profile" src="./images/Photographers/MimiKeel.jpg"></div>                
             </div>
@@ -36,15 +42,10 @@
                    <div class="div__titre__filtres"><h3> Trier par</h3> </div>
                    <div class="div__filtres">
                        <nav>
-                            <ul>
-                                <li class="déroulant"><h3> Filtres</h3>
-                                    <ul class="sous">
-                                        <li><a href="">Popularité</a></li>
-                                        <li><a href="">Date</a></li>
-                                        <li><a href="">Titre</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                       
+
+
+            
                        </nav>
                    </div>
                 </div>
@@ -63,6 +64,16 @@
                             <div class="nom__photo"><h2>Solitude</h2></div>
                             <div class="nb__like"><p> 12</p></div>
                             <div class="icone__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="poste__video">
+                            <div class="div__video"><video width="320" height="240" controls><source src="./images/Images/Sport_Tricks_in_the_air.mp4" type="video/mp4"></video></div>
+                            <div class="description__video">
+                                <div class="nom__video"><h2>Solitude</h2></div>
+                                <div class="nb__like"><p> 12</p></div>
+                                <div class="icone__like"><i class="fas fa-heart"></i></div>
+                            </div>
                         </div>
                     </div>
                     <div class="poste__photo">
@@ -137,7 +148,7 @@
             </div>
             <span class="div__tarif-like">
                 <div class="div__nb-like">
-                    <div><h2>297 081</h2></div>
+                    <div><h2 class="total-likes">297 081</h2></div>
                     <div><i class="fas fa-heart"></i></div>
                 </div>
                 <div class="div__tarif"><!--<h2>300€ / jour</h2>--></div>

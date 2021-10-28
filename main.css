@@ -376,7 +376,7 @@ body, .page {
 }
 
 .page .block-page .conteneur2, .page body .conteneur2 {
-  width: 90%;
+  width: 92%;
   margin: auto;
   font-family: 'DM-Sans';
 }
@@ -389,6 +389,7 @@ body, .page {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 20px;
+  padding-left: 2%;
 }
 
 .page .block-page .conteneur2 .tri .div__titre__filtres, .page body .conteneur2 .tri .div__titre__filtres {
@@ -488,18 +489,29 @@ body, .page {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 35px;
+  padding-left: 2%;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo, .page body .conteneur2 .galerie .poste__photo {
-  width: 27%;
+.page .block-page .conteneur2 .galerie .poste__photo, .page .block-page .conteneur2 .galerie .poste__video, .page body .conteneur2 .galerie .poste__photo, .page body .conteneur2 .galerie .poste__video {
+  width: 29%;
   margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-right: 2%;
+  margin-left: 2%;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo img, .page body .conteneur2 .galerie .poste__photo img {
+.page .block-page .conteneur2 .galerie .poste__photo video, .page .block-page .conteneur2 .galerie .poste__video video, .page body .conteneur2 .galerie .poste__photo video, .page body .conteneur2 .galerie .poste__video video {
+  border: none;
+}
+
+.page .block-page .conteneur2 .galerie .poste__photo img, .page .block-page .conteneur2 .galerie .poste__photo video, .page .block-page .conteneur2 .galerie .poste__video img, .page .block-page .conteneur2 .galerie .poste__video video, .page body .conteneur2 .galerie .poste__photo img, .page body .conteneur2 .galerie .poste__photo video, .page body .conteneur2 .galerie .poste__video img, .page body .conteneur2 .galerie .poste__video video {
   width: 100%;
   height: 324px;
   border-radius: 6px;
@@ -507,7 +519,7 @@ body, .page {
      object-fit: cover;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo .description__photo, .page body .conteneur2 .galerie .poste__photo .description__photo {
+.page .block-page .conteneur2 .galerie .poste__photo .description__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__video, .page .block-page .conteneur2 .galerie .poste__video .description__photo, .page .block-page .conteneur2 .galerie .poste__video .description__video, .page body .conteneur2 .galerie .poste__photo .description__photo, .page body .conteneur2 .galerie .poste__photo .description__video, .page body .conteneur2 .galerie .poste__video .description__photo, .page body .conteneur2 .galerie .poste__video .description__video {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,17 +529,20 @@ body, .page {
           align-items: center;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__photo, .page body .conteneur2 .galerie .poste__photo .description__photo .nom__photo {
-  width: 84%;
+.page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__video, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nom__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nom__video, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nom__photo, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nom__video, .page .block-page .conteneur2 .galerie .poste__video .description__video .nom__photo, .page .block-page .conteneur2 .galerie .poste__video .description__video .nom__video, .page body .conteneur2 .galerie .poste__photo .description__photo .nom__photo, .page body .conteneur2 .galerie .poste__photo .description__photo .nom__video, .page body .conteneur2 .galerie .poste__photo .description__video .nom__photo, .page body .conteneur2 .galerie .poste__photo .description__video .nom__video, .page body .conteneur2 .galerie .poste__video .description__photo .nom__photo, .page body .conteneur2 .galerie .poste__video .description__photo .nom__video, .page body .conteneur2 .galerie .poste__video .description__video .nom__photo, .page body .conteneur2 .galerie .poste__video .description__video .nom__video {
+  width: 77%;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__photo > h2, .page body .conteneur2 .galerie .poste__photo .description__photo .nom__photo > h2 {
+.page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__photo > h2, .page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__video > h2, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nom__photo > h2, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nom__video > h2, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nom__photo > h2, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nom__video > h2, .page .block-page .conteneur2 .galerie .poste__video .description__video .nom__photo > h2, .page .block-page .conteneur2 .galerie .poste__video .description__video .nom__video > h2, .page body .conteneur2 .galerie .poste__photo .description__photo .nom__photo > h2, .page body .conteneur2 .galerie .poste__photo .description__photo .nom__video > h2, .page body .conteneur2 .galerie .poste__photo .description__video .nom__photo > h2, .page body .conteneur2 .galerie .poste__photo .description__video .nom__video > h2, .page body .conteneur2 .galerie .poste__video .description__photo .nom__photo > h2, .page body .conteneur2 .galerie .poste__video .description__photo .nom__video > h2, .page body .conteneur2 .galerie .poste__video .description__video .nom__photo > h2, .page body .conteneur2 .galerie .poste__video .description__video .nom__video > h2 {
   font-weight: normal;
   color: #901C1C;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo .description__photo .nb__like, .page body .conteneur2 .galerie .poste__photo .description__photo .nb__like {
-  width: 8%;
+.page .block-page .conteneur2 .galerie .poste__photo .description__photo .nb__like, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nb__like, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nb__like, .page .block-page .conteneur2 .galerie .poste__video .description__video .nb__like, .page body .conteneur2 .galerie .poste__photo .description__photo .nb__like, .page body .conteneur2 .galerie .poste__photo .description__video .nb__like, .page body .conteneur2 .galerie .poste__video .description__photo .nb__like, .page body .conteneur2 .galerie .poste__video .description__video .nb__like {
+  width: 11%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,18 +551,18 @@ body, .page {
           justify-content: center;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo .description__photo .nb__like > p, .page body .conteneur2 .galerie .poste__photo .description__photo .nb__like > p {
+.page .block-page .conteneur2 .galerie .poste__photo .description__photo .nb__like > p, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nb__like > p, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nb__like > p, .page .block-page .conteneur2 .galerie .poste__video .description__video .nb__like > p, .page body .conteneur2 .galerie .poste__photo .description__photo .nb__like > p, .page body .conteneur2 .galerie .poste__photo .description__video .nb__like > p, .page body .conteneur2 .galerie .poste__video .description__photo .nb__like > p, .page body .conteneur2 .galerie .poste__video .description__video .nb__like > p {
   font-weight: 400;
   color: #901C1C;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo .description__photo h2, .page .block-page .conteneur2 .galerie .poste__photo .description__photo p, .page body .conteneur2 .galerie .poste__photo .description__photo h2, .page body .conteneur2 .galerie .poste__photo .description__photo p {
+.page .block-page .conteneur2 .galerie .poste__photo .description__photo h2, .page .block-page .conteneur2 .galerie .poste__photo .description__photo p, .page .block-page .conteneur2 .galerie .poste__photo .description__video h2, .page .block-page .conteneur2 .galerie .poste__photo .description__video p, .page .block-page .conteneur2 .galerie .poste__video .description__photo h2, .page .block-page .conteneur2 .galerie .poste__video .description__photo p, .page .block-page .conteneur2 .galerie .poste__video .description__video h2, .page .block-page .conteneur2 .galerie .poste__video .description__video p, .page body .conteneur2 .galerie .poste__photo .description__photo h2, .page body .conteneur2 .galerie .poste__photo .description__photo p, .page body .conteneur2 .galerie .poste__photo .description__video h2, .page body .conteneur2 .galerie .poste__photo .description__video p, .page body .conteneur2 .galerie .poste__video .description__photo h2, .page body .conteneur2 .galerie .poste__video .description__photo p, .page body .conteneur2 .galerie .poste__video .description__video h2, .page body .conteneur2 .galerie .poste__video .description__video p {
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo .description__photo .icone__like, .page body .conteneur2 .galerie .poste__photo .description__photo .icone__like {
-  width: 8%;
+.page .block-page .conteneur2 .galerie .poste__photo .description__photo .icone__like, .page .block-page .conteneur2 .galerie .poste__photo .description__video .icone__like, .page .block-page .conteneur2 .galerie .poste__video .description__photo .icone__like, .page .block-page .conteneur2 .galerie .poste__video .description__video .icone__like, .page body .conteneur2 .galerie .poste__photo .description__photo .icone__like, .page body .conteneur2 .galerie .poste__photo .description__video .icone__like, .page body .conteneur2 .galerie .poste__video .description__photo .icone__like, .page body .conteneur2 .galerie .poste__video .description__video .icone__like {
+  width: 13%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,15 +570,17 @@ body, .page {
       -ms-flex-pack: center;
           justify-content: center;
   color: #901C1C;
+  cursor: pointer;
 }
 
-.page .block-page .conteneur2 .galerie .poste__photo .description__photo .icone__like .fas.fa-heart.fa-lg, .page body .conteneur2 .galerie .poste__photo .description__photo .icone__like .fas.fa-heart.fa-lg {
+.page .block-page .conteneur2 .galerie .poste__photo .description__photo .icone__like .fas.fa-heart.fa-lg, .page .block-page .conteneur2 .galerie .poste__photo .description__video .icone__like .fas.fa-heart.fa-lg, .page .block-page .conteneur2 .galerie .poste__video .description__photo .icone__like .fas.fa-heart.fa-lg, .page .block-page .conteneur2 .galerie .poste__video .description__video .icone__like .fas.fa-heart.fa-lg, .page body .conteneur2 .galerie .poste__photo .description__photo .icone__like .fas.fa-heart.fa-lg, .page body .conteneur2 .galerie .poste__photo .description__video .icone__like .fas.fa-heart.fa-lg, .page body .conteneur2 .galerie .poste__video .description__photo .icone__like .fas.fa-heart.fa-lg, .page body .conteneur2 .galerie .poste__video .description__video .icone__like .fas.fa-heart.fa-lg {
   width: 10px;
   height: 10px;
 }
 
 .page .block-page .div__tarif-like, .page body .div__tarif-like {
   width: 25%;
+  height: 60px;
   position: fixed;
   background-color: #DB8876;
   display: -webkit-box;
@@ -1084,27 +1101,30 @@ body, .page {
     margin-bottom: 0px;
     margin: auto;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo {
+  .page .block-page .conteneur2 .galerie .poste__photo, .page .block-page .conteneur2 .galerie .poste__video {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 0px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo .div__img {
+  .page .block-page .conteneur2 .galerie .poste__photo .div__img, .page .block-page .conteneur2 .galerie .poste__photo .div__video, .page .block-page .conteneur2 .galerie .poste__video .div__img, .page .block-page .conteneur2 .galerie .poste__video .div__video {
     height: 190px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo img {
+  .page .block-page .conteneur2 .galerie .poste__photo img, .page .block-page .conteneur2 .galerie .poste__photo video, .page .block-page .conteneur2 .galerie .poste__video img, .page .block-page .conteneur2 .galerie .poste__video video {
     height: 190px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo .description__photo {
+  .page .block-page .conteneur2 .galerie .poste__photo .description__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__video, .page .block-page .conteneur2 .galerie .poste__video .description__photo, .page .block-page .conteneur2 .galerie .poste__video .description__video {
     width: 100%;
     padding-top: 10px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__photo {
+  .page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__video, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nom__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nom__video, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nom__photo, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nom__video, .page .block-page .conteneur2 .galerie .poste__video .description__video .nom__photo, .page .block-page .conteneur2 .galerie .poste__video .description__video .nom__video {
     width: 85%;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo .description__photo h2, .page .block-page .conteneur2 .galerie .poste__photo .description__photo p {
+  .page .block-page .conteneur2 .galerie .poste__photo .description__photo h2, .page .block-page .conteneur2 .galerie .poste__photo .description__photo p, .page .block-page .conteneur2 .galerie .poste__photo .description__video h2, .page .block-page .conteneur2 .galerie .poste__photo .description__video p, .page .block-page .conteneur2 .galerie .poste__video .description__photo h2, .page .block-page .conteneur2 .galerie .poste__video .description__photo p, .page .block-page .conteneur2 .galerie .poste__video .description__video h2, .page .block-page .conteneur2 .galerie .poste__video .description__video p {
     margin: 0;
     font-size: 14px;
+  }
+  .page .block-page .conteneur2 .galerie .poste__photo .description__photo .icone__like, .page .block-page .conteneur2 .galerie .poste__photo .description__video .icone__like, .page .block-page .conteneur2 .galerie .poste__video .description__photo .icone__like, .page .block-page .conteneur2 .galerie .poste__video .description__video .icone__like {
+    margin-left: 0px;
   }
   .page .block-page .div__tarif-like {
     display: none;
@@ -1207,7 +1227,7 @@ body, .page {
     position: relative;
     width: 200px;
     top: 135px;
-    right: 10px;
+    z-index: 10;
   }
   .page .block-page .conteneur1 .div__bouton button {
     width: 230px;
@@ -1216,7 +1236,7 @@ body, .page {
   }
   .page .block-page .conteneur1 .div__portrait {
     position: relative;
-    right: 185px;
+    right: 175px;
     width: 50%;
     padding-right: 8%;
     padding-bottom: 6%;
@@ -1248,26 +1268,46 @@ body, .page {
     width: 95%;
     margin-bottom: 0px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo {
+  .page .block-page .conteneur2 .galerie .poste__photo, .page .block-page .conteneur2 .galerie .poste__video {
     width: 45%;
-    margin-top: 10px;
+    margin-bottom: 15px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo .div__img {
+  .page .block-page .conteneur2 .galerie .poste__photo .div__img, .page .block-page .conteneur2 .galerie .poste__video .div__img {
     height: 190px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo img {
+  .page .block-page .conteneur2 .galerie .poste__photo img, .page .block-page .conteneur2 .galerie .poste__photo video, .page .block-page .conteneur2 .galerie .poste__video img, .page .block-page .conteneur2 .galerie .poste__video video {
     height: 190px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo .description__photo {
+  .page .block-page .conteneur2 .galerie .poste__photo .description__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__video, .page .block-page .conteneur2 .galerie .poste__video .description__photo, .page .block-page .conteneur2 .galerie .poste__video .description__video {
     width: 100%;
     padding-top: 10px;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__photo {
+  .page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__photo .nom__video, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nom__photo, .page .block-page .conteneur2 .galerie .poste__photo .description__video .nom__video, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nom__photo, .page .block-page .conteneur2 .galerie .poste__video .description__photo .nom__video, .page .block-page .conteneur2 .galerie .poste__video .description__video .nom__photo, .page .block-page .conteneur2 .galerie .poste__video .description__video .nom__video {
     width: 85%;
   }
-  .page .block-page .conteneur2 .galerie .poste__photo .description__photo h2, .page .block-page .conteneur2 .galerie .poste__photo .description__photo p {
+  .page .block-page .conteneur2 .galerie .poste__photo .description__photo h2, .page .block-page .conteneur2 .galerie .poste__photo .description__photo p, .page .block-page .conteneur2 .galerie .poste__photo .description__video h2, .page .block-page .conteneur2 .galerie .poste__photo .description__video p, .page .block-page .conteneur2 .galerie .poste__video .description__photo h2, .page .block-page .conteneur2 .galerie .poste__video .description__photo p, .page .block-page .conteneur2 .galerie .poste__video .description__video h2, .page .block-page .conteneur2 .galerie .poste__video .description__video p {
     margin: 0;
     font-size: 19px;
+  }
+  .page .block-page .conteneur2 .galerie .poste__photo .description__photo .icone__like, .page .block-page .conteneur2 .galerie .poste__photo .description__video .icone__like, .page .block-page .conteneur2 .galerie .poste__video .description__photo .icone__like, .page .block-page .conteneur2 .galerie .poste__video .description__video .icone__like {
+    margin-left: 0px;
+  }
+  .page .block-page .bground {
+    z-index: 110;
+  }
+  .page .block-page .div__tarif-like {
+    width: 30%;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .page .block-page .div__tarif-like .div__nb-like {
+    width: 46%;
+  }
+  .page .block-page .div__tarif-like .div__nb-like i {
+    font-size: 15px;
+  }
+  .page .block-page .div__tarif-like .div__tarif {
+    width: 54%;
   }
 }
 /*# sourceMappingURL=main.css.map */

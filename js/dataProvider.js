@@ -43,10 +43,20 @@ export const getImageById = async (id) =>{
     return image;
 }
 
+export const getVideoById = async (id) =>{
+    const allVideos = await getImage();
+    const video = allVideos.find((oneVideo) =>{
+        oneVideo == "video";
+        return oneVideo.id == id;
+    })
+
+    return video;
+}
+
 export const getMediaByPhotographer = async (id) => {
     const data = await getData();
     const medias = data.media.filter((media) => 
-        media.photographerId == id 
+        media.photographerId == id
     )   
     return medias;
 }

@@ -1,4 +1,5 @@
 import {getPhotographById} from './dataProvider';
+import {fetchMedia} from './galerie';
 
 const photographId = new URL(location.href).searchParams.get('id');
 console.log('idPhotographe', photographId);
@@ -81,6 +82,7 @@ const conteneur = (data) => {
 const getPhotographData = async() => {
     photograph = await getPhotographById(photographId);
     conteneur(photograph);
+    fetchMedia(photograph);
 }
 
 getPhotographData();

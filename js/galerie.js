@@ -1,107 +1,89 @@
 import {getPhotographById, getMediaByPhotographer} from './dataProvider';
 import MediaFactory from './mediaFactory';
 
-const photographId = new URL(location.href).searchParams.get('id');
-console.log('idPhotographe', photographId);
-
 let photograph = null;
 let medias = [];
+let likes = 0;
 
-const title = (data) =>{
-    const imageDivName = document.createElement("div");
-    imageDivName.className = "nom__photo";
 
-    const imageName = document.createElement("h2");
-    imageName.innerText = data.title;
+// fonction filtre
+function globalFilter(e){
+    e.preventDefault();
+    e.stopPropagation();
+    debugger;
+    const value = e.target.value;
+    console.log("attribut de filtre : " + value);
 
-    imageDivName.appendChild(imageName);
-
-    return imageDivName;
-}
-
-const like = (data) =>{
-    const divLike = document.createElement("div");
-    divLike.className = "nb__like";
-
-    const nbLike = document.createElement("h2");
-    nbLike.innerText = data.likes;
-
-    divLike.appendChild(nbLike);
-
-    return divLike;
-}
-
-const likeIcone = (data) =>{
-    const divLikeIcon = document.createElement("div");
-    divLikeIcon.className = "icone__like";
-
-    const likeIcone = document.createElement("i");
-    likeIcone.className = "fas fa-heart";
-
-    divLikeIcon.appendChild(likeIcone);
-
-    return divLikeIcon;
-}
-
-const displayImageInfo = (data) =>{
-    const divImageInfo = document.createElement("div");
-    divImageInfo.className = "description__photo";
-
-    const imageDivName = title(data);
-    const divLike = like(data);
-    const divLikeIcon = likeIcone(data);
-
-    divImageInfo.append(imageDivName, divLike, divLikeIcon);
-
-    return divImageInfo;
-}
-
-const displayImage = (data) =>{
-    const divImage = document.createElement("div");
-    divImage.className = "div__img";
-
-    const image = document.createElement("img")
-    image.src = "images/images/" + data.image;
-
-    divImage.appendChild(image);
-
-    return divImage;
-}
-
-const displayImagePost = (data) =>{
-    const divImagePost = document.createElement("div");
-    divImagePost.className = "poste__photo";
-
+/*    switch (value) {
+        case "popularite":
+            const filterMedias = filterByTrending(medias);
+            displayGalerie(filterMedias);
+            break;
     
-    const divImageInfo = displayImageInfo(data);
-    const divImage = displayImage(data);
+        default:
+            break;
+    }*/
+}
 
-    divImagePost.append(divImageInfo, divImage);
+const select = document.querySelector(".sous");
+select.addEventListener("change", globalFilter);
 
-    return divImagePost;
+
+
+const addLike = () =>{
+    likes += 1;
+    fetchLikes();
 }
 
 const displayGalerie = (mediasArray) =>{
+    console.log(mediasArray);
     const galerie = document.querySelector(".galerie");
 
+    galerie.innerText = "";
+
     for (const media of mediasArray) {
-        const mediaType = media.image != null?"image":"video";
-        const divImagePost = new MediaFactory(mediaType, media);
-        if (mediaType== "image") {
-            console.log(divImagePost, mediaType);
-            divImagePost.appendTo(galerie);
-        }
-        
-       // galerie.prepend(divImagePost);
+        const mediaType = media.image == null?"video":"image";
+        media.photograph = photograph;
+        const divVideoPost = new MediaFactory(mediaType, media, addLike);
+        divVideoPost.appendTo(galerie);
     }
 }
 
-const getMedias =  async() => {
-    medias = await getMediaByPhotographer(photographId);
-    console.log("medias :",medias);
-    displayGalerie(medias);
+const fetchLikes = (likesCount) => {
+    const likeToFetch = likesCount || likes;
+
+    const divTotalLikes = document.querySelector('.total-likes');
+    divTotalLikes.innerText = likeToFetch;
 }
 
-getMedias();
+const filter = (a, b) =>{
+    return a.likes - b.likes;
+}
+
+const filterByTrending = (medias) =>{
+
+/*    const trendingFilterName = document.querySelector(".nom__filtres");
+
+    trendingFilterName.addEventListener('click', () => {
+        console.log('Le filtre Popularité a été selectionné""');
+    })
+*/
+    return medias.sort(filter);
+}
+
+const getMedias =  async() => {
+    medias = await getMediaByPhotographer(photograph.id);
+    console.log("medias :",medias);
+    displayGalerie(medias);
+
+    likes = medias.reduce(( totalLikes, media) => totalLikes + media.likes, 0)
+
+    fetchLikes();
+}
+
+export const fetchMedia = (photographer) => {
+    photograph = photographer;
+    getMedias();
+}
 
 

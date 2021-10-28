@@ -133,7 +133,7 @@
     }
 }
 
-//responsive page principale 
+//responsive page principale desktop
 @media all and (min-width: 769px) and (max-width:1300px){
 
     .page{
@@ -281,30 +281,34 @@
                     margin-bottom: 0px;
                     margin: auto;
         
-                    .poste__photo{
+                    .poste__photo, .poste__video{
                         width: 100%;
                         margin-top: 10px;
                         margin-bottom: 0px;
 
-                        .div__img{
+                        .div__img, .div__video{
                             height: 190px;
                         }
     
-                        img{
+                        img, video{
                             height: 190px;
                         }
     
-                        .description__photo{
+                        .description__photo, .description__video{
                             width: 100%;
                             padding-top: 10px;
 
-                            .nom__photo{
+                            .nom__photo, .nom__video{
                                 width: 85%;
                             }
     
                             h2, p{
                                 margin: 0;
                                 font-size: 14px;
+                            }
+
+                            .icone__like{
+                                margin-left: 0px;
                             }
                         }
                     }       
@@ -443,7 +447,7 @@
                     position: relative;
                     width: 200px;
                     top: 135px;
-                    right: 10px;
+                    z-index: 10;
                     
                     button{
                         width: 230px;
@@ -454,7 +458,7 @@
 
                 .div__portrait{
                     position: relative;
-                    right: 185px;
+                    right: 175px;
                     width: 50%;
                     padding-right: 8%;
                     padding-bottom: 6%;
@@ -483,35 +487,67 @@
                     width: 95%;
                     margin-bottom: 0px;
         
-                    .poste__photo{
+                    .poste__photo, .poste__video{
                         width: 45%;
-                        margin-top: 10px;
+                        margin-bottom: 15px;
 
                         .div__img{
                             height: 190px;
                         }
     
-                        img{
+                        img, video{
                             height: 190px;
                         }
     
-                        .description__photo{
+                        .description__photo, .description__video{
                             width: 100%;
                             padding-top: 10px;
 
-                            .nom__photo{
+                            .nom__photo, .nom__video{
                                 width: 85%;
                             }
     
                             h2, p{
                                 margin: 0;
-                                    font-size: 19px;
+                                font-size: 19px;
+                            }
+
+                            .icone__like{
+                                margin-left: 0px;
                             }
                         }
                     }       
                 }
             }
+
+            .bground{
+                z-index: 110;
+            }
+
+            .div__tarif-like{
+                width: 30%;
+                min-width: 0;
+                font-size: 13px;
+
+                .div__nb-like{
+                    width: 46%;
+
+                    i{
+                        font-size: 15px;
+                    }
+                }
+
+                .div__tarif{
+                    width: 54%;
+                }
+            }
         }
     }
+}
+
+// Responsive page photographe desktop
+@media all and (min-width: 769px) and (max-width:1300px){
+
+
 }
 

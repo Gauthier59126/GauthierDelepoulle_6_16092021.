@@ -1,6 +1,8 @@
 export default class ImageFactory {
-    constructor (imageData){
+    constructor (imageData,addLike){
         this.createImage(imageData);
+        this.likes = imageData.likes;
+        this.addLike = addLike;
     }
 
     createImage(data) {
@@ -44,14 +46,15 @@ export default class ImageFactory {
         const divLike = document.createElement("div");
         divLike.className = "nb__like";
     
-        const nbLike = document.createElement("h2");
-        nbLike.innerText = data.likes;
+        this.nbLike = document.createElement("h2");
+        this.nbLike.innerText = data.likes;
     
-        divLike.appendChild(nbLike);
+        divLike.appendChild(this.nbLike);
     
         return divLike;
     }
 
+    //nombre de like lors du click sur l'icone
     getLikeIcone (data){
         const divLikeIcon = document.createElement("div");
         divLikeIcon.className = "icone__like";
@@ -60,6 +63,13 @@ export default class ImageFactory {
         likeIcone.className = "fas fa-heart";
     
         divLikeIcon.appendChild(likeIcone);
+
+        likeIcone.addEventListener('click', () => {
+            console.log('Le média a été liké');
+            this.likes += 1;
+            this.nbLike.innerText = this.likes;
+            this.addLike();
+        })
     
         return divLikeIcon;
     }
@@ -69,7 +79,7 @@ export default class ImageFactory {
         divImage.className = "div__img";
     
         const image = document.createElement("img")
-        image.src = "images/images/" + data.image;
+        image.src = "images/"+ data.photograph.name.split(" ")[0] + "/" + data.image;
     
         divImage.appendChild(image);
     

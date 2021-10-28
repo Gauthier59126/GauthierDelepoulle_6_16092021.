@@ -1,13 +1,15 @@
 import ImageFactory from "./imageFactory";
+import VideoFactory from "./videoFactory";
+
 export default class MediaFactory {
-    constructor (mediaType, mediaData){
+    constructor (mediaType, mediaData, addLike){
 
         switch (mediaType) {
             case "image":
-                return new ImageFactory(mediaData);
+                return new ImageFactory(mediaData, addLike);
                 break;
             case "video":
-                return null;
+                return new VideoFactory(mediaData, addLike);
                 break;
             default: 
             throw Error("Ce type de média n'est pas pris en compte")

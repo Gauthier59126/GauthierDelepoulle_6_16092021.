@@ -81,8 +81,6 @@ const hashtag = (data) =>{
         divHashtag.appendChild(theme);
     }
 
-    //divHashtag.append(portrait, events, travel, animals);
-
     return divHashtag;
 }
 
@@ -115,8 +113,6 @@ const getPhotographData = async () => {
 (function (){
     getPhotographData();
 })()
-
-//displayPhotograph();
 
 
 
