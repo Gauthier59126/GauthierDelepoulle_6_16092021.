@@ -28,12 +28,6 @@
                         <div class="animals">#animals</div>
                     </div>
                 </div>-->
-                <select class="sous">
-                    <option ></option>
-                    <option value="popularite" >Popularité</option>
-                    <option value="date">Date</option>
-                    <option value="titre">Titre</option>
-                </select>
                 <div class="div__bouton"><button class="btn-signup modal-btn">Contactez-moi</button></div>
                 <div class="div__portrait"><img class="img__profile" src="./images/Photographers/MimiKeel.jpg"></div>                
             </div>
@@ -41,12 +35,11 @@
                 <div class="tri">
                    <div class="div__titre__filtres"><h3> Trier par</h3> </div>
                    <div class="div__filtres">
-                       <nav>
-                       
-
-
-            
-                       </nav>
+                        <select class="sous">
+                            <option value="popularite" >Popularité</option>
+                            <option value="date">Date</option>
+                            <option value="titre">Titre</option>
+                        </select>
                    </div>
                 </div>
                 <div class="galerie">                                  
@@ -121,26 +114,26 @@
                           <!--  
                             <h1 class="form-title">Contactez-moi </h1>-->
                         </div>                      
-                      <div class="formData">  
-                        <label for="first"  class="label__form">Prénom</label><br>
-                        <small class="error firstName"></small>
-                        <input class="text-control" type="text" id="first" name="first" minlength="2"/><br>
-                      </div>
-                      <div class="formData">
-                        <label for="last" class="label__form">Nom</label><br>
-                        <small class="error lastName"></small>
-                        <input class="text-control" type="text" id="last" name="last"/><br>
-                      </div>
-                      <div class="formData">
-                        <label for="email" class="label__form">E-mail</label><br>
-                        <small class="error email"></small>
-                        <input class="text-control" type="email" id="email" name="email"/><br>
-                      </div>
-                      <div class="formData formData--modif">
-                        <label for="message" class="label__form">Votre message</label><br>
-                        <small class="error message error--message"></small>
-                        <textarea class="text-control" type="message" id="message" name="message"></textarea><br>
-                      </div>
+                        <div class="formData">  
+                            <label for="first"  class="label__form">Prénom</label><br>
+                            <small class="error firstName"></small>
+                            <input class="text-control" type="text" id="first" name="first" minlength="2"/><br>
+                        </div>
+                        <div class="formData">
+                            <label for="last" class="label__form">Nom</label><br>
+                            <small class="error lastName"></small>
+                            <input class="text-control" type="text" id="last" name="last"/><br>
+                        </div>
+                        <div class="formData">
+                            <label for="email" class="label__form">E-mail</label><br>
+                            <small class="error email"></small>
+                            <input class="text-control" type="email" id="email" name="email"/><br>
+                        </div>
+                        <div class="formData formData--modif">
+                            <label for="message" class="label__form">Votre message</label><br>
+                            <small class="error message error--message"></small>
+                            <textarea class="text-control" type="message" id="message" name="message"></textarea><br>
+                        </div>
                       <div class="div-btn"><input class="btn-submit button" type="submit" value="Envoyer"/></div>
                     </form>
                   </div>
@@ -154,56 +147,24 @@
                 <div class="div__tarif"><!--<h2>300€ / jour</h2>--></div>
             </span>
 
-            <!-- Conteneur principal de tout le diaporama 
-            <div class="diapo">
-                <div class="elements">
-                    <div class="element active">
-                        <img src="images\Mimi\Animals_Rainbow.jpg" alt="Image 1">
-                    </div>
-                    <div class="element">
-                        <img src="images\Mimi\Travel_Lonesome.jpg" alt="Image 2">
-                        <div class="caption">
-                            <h2>Image 2</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="images\Mimi\Event_SeasideWedding.jpg" alt="Image 3">
-                        <div class="caption">
-                            <h2>Image 3</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="images\Mimi\Portrait_Background.jpg" alt="Image 4">
-                        <div class="caption">
-                            <h2>Image 4</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="images\Mimi\Event_PintoWedding.jpg" alt="Image 5">
-                        <div class="caption">
-                            <h2>Image 5</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="images\Mimi\Portrait_Wednesday.jpg" alt="Image 6">
-                        <div class="caption">
-                            <h2>Image 6</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
-                        </div>
+            <!-- LIGHTBOX -->
+            <div class="content">
+                <!--<a href="#img1"><img class="thumb" src="images\Ellie-Rose\Architecture_Connected_Curves.jpg"></a>  -->      
+                <div class="lightbox" id="img1">
+                    <a href="#img3" class="light-btn btn-prev"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#_" class="btn-close">X</a>
+                    <div class="contain-img">
+                        <img class="lightbox-image" src="images\Ellie-Rose\Architecture_Connected_Curves.jpg">
+                        <video class="lightbox-video" src="images\Ellie-Rose\Sport_Tricks_in_the_air.mp4" controls></video>
+                        <h2 class="title">Outdoor Baths</h2>  
                     </div>                    
+                   <a href="#img2" class="light-btn btn-next"><i class="fas fa-chevron-right"></i></a>
                 </div>
-                <i id="nav-gauche" class="las la-chevron-left"></i>
-                <i id="nav-droite" class="las la-chevron-right"></i>
-            </div> -->
-
+            </div>
         </div>
     </body>
+    <!--<script src="./public/lightbox.bundle.js"></script>-->
     <script src="./js/formulaire.js"></script>
     <script src="public/page.bundle.js"></script>
     <script src="public/nom.bundle.js"></script>
-    <script src="public/galerie.bundle.js"></script>
 </html>

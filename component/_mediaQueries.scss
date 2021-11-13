@@ -280,11 +280,14 @@
                     width: 100%;
                     margin-bottom: 0px;
                     margin: auto;
+                    padding-left: 0px;
         
                     .poste__photo, .poste__video{
                         width: 100%;
                         margin-top: 10px;
                         margin-bottom: 0px;
+                        margin-left: 0px;
+                        margin-right: 0px;
 
                         .div__img, .div__video{
                             height: 190px;
@@ -319,6 +322,48 @@
                 display: none;
             }
 
+            //LIGHTBOX
+            .content{
+            
+                .lightbox {
+            
+                    img {
+                        height: 40%;     
+                    }
+            
+                    .light-btn {
+                        top: 46%;
+            
+                        .fas.fa-chevron-right, .fas.fa-chevron-left{
+                            font-size: 20px;
+                        }
+                    }
+            
+                    .btn-prev {
+                        left: 4%;
+                    }
+                    .btn-next {
+                        right: 4%;
+                    }
+            
+                    .btn-close {
+                        right: 6%;
+                        top: 25%;
+                        font-size: 20px;
+                    }
+            
+                    .contain-img{
+
+                        .title{
+                            padding-left: 0px;
+                            margin-top: 8px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+                   
+            // FORMULAIRE DE CONTACT
             .bground{
             
                 .content {
@@ -486,6 +531,7 @@
                     justify-content: space-between;
                     width: 95%;
                     margin-bottom: 0px;
+                    padding-left: 0px;
         
                     .poste__photo, .poste__video{
                         width: 45%;
@@ -517,6 +563,46 @@
                             }
                         }
                     }       
+                }
+            }
+
+            .content{
+            
+                .lightbox {
+            
+                    img {
+                        height: 50%;     
+                    }
+            
+                    .light-btn {
+                        top: 47%;
+            
+                        .fas.fa-chevron-right, .fas.fa-chevron-left{
+                            font-size: 32px;
+                        }
+                    }
+            
+                    .btn-prev {
+                        left: 8%;
+                    }
+                    .btn-next {
+                        right: 8%;
+                    }
+            
+                    .btn-close {
+                        right: 9%;
+                        top: 21%;
+                        font-size: 32px;
+                    }
+            
+                    .contain-img{
+
+                        .title{
+                            padding-left: 0px;
+                            margin-top: 8px;
+                            font-size: 24px;
+                        }
+                    }
                 }
             }
 

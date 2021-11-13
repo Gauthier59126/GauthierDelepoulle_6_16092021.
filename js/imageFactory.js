@@ -1,3 +1,5 @@
+import lightbox from './lightbox';
+
 export default class ImageFactory {
     constructor (imageData,addLike){
         this.createImage(imageData);
@@ -82,6 +84,10 @@ export default class ImageFactory {
         image.src = "images/"+ data.photograph.name.split(" ")[0] + "/" + data.image;
     
         divImage.appendChild(image);
+
+        divImage.addEventListener("click", () =>{
+            lightbox(data);
+        })
     
         return divImage;
     }

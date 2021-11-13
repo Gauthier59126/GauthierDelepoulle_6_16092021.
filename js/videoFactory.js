@@ -1,8 +1,12 @@
+import lightbox from './lightbox';
+
 export default class VideoFactory{
     constructor (videoData, addLike){
         this.createVideo(videoData);
         this.likes = videoData.likes;
         this.addLike = addLike;
+
+        console.log('video')
     }
 
     createVideo(data) {
@@ -72,6 +76,7 @@ export default class VideoFactory{
     }
 
     getVideo (data){
+        console.log("vidéo en cours de lecture")
         const divVideo = document.createElement("div");
         divVideo.className = "div__video";
     
@@ -81,6 +86,10 @@ export default class VideoFactory{
         video.controls = true;
     
         divVideo.appendChild(video);
+
+        divVideo.addEventListener("click", () =>{
+            lightbox(data);
+        })
     
         return divVideo;
     }

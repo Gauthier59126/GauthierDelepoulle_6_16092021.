@@ -10,25 +10,23 @@ let likes = 0;
 function globalFilter(e){
     e.preventDefault();
     e.stopPropagation();
-    debugger;
     const value = e.target.value;
     console.log("attribut de filtre : " + value);
 
-/*    switch (value) {
+    switch (value) {
         case "popularite":
+            console.log(medias);
             const filterMedias = filterByTrending(medias);
             displayGalerie(filterMedias);
             break;
-    
+ 
         default:
             break;
-    }*/
+    }
 }
 
 const select = document.querySelector(".sous");
 select.addEventListener("change", globalFilter);
-
-
 
 const addLike = () =>{
     likes += 1;

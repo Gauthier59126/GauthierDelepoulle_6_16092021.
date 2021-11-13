@@ -1,5 +1,10 @@
-import {getPhotographById} from './dataProvider';
-import {fetchMedia} from './galerie';
+//import {fetchMedia} from './galerie';
+import {getPhotographById, getMediaByPhotographer} from './dataProvider';
+import MediaFactory from './mediaFactory';
+import {sortByTrending, sortByTitle, sortByDate} from './sort';
+
+let medias = [];
+let likes = 0;
 
 const photographId = new URL(location.href).searchParams.get('id');
 console.log('idPhotographe', photographId);
@@ -52,6 +57,7 @@ const hashtag = (data) =>{
 const displayImagePhotograph = (data) =>{
     const divImage = document.querySelector('.img__profile');
     divImage.src = "images/Photographers/" + data.portrait;
+    divImage.alt = "Photo de profil du photographe";
 }
  
 const displayInfoProfil = (data) => {
@@ -77,6 +83,81 @@ const conteneur = (data) => {
     const divInfoProfil = displayInfoProfil(data);
 
     conteneur1.prepend(divInfoProfil);
+}
+
+// fonction filtre
+function globalFilter(e){
+    e.preventDefault();
+    e.stopPropagation();
+    const value = e.target.value;
+    console.log("attribut de filtre : " + value);
+
+    let sortMedias =[];
+
+    switch (value) {
+        case "popularite":
+            sortMedias = sortByTrending(medias);
+            displayGalerie(sortMedias);
+            break;
+        case "titre":
+            sortMedias = sortByTitle(medias);
+            displayGalerie(sortMedias);
+            break;
+
+        case "date":
+            sortMedias = sortByDate(medias);
+            displayGalerie(sortMedias);
+            break;
+        default:
+            break;
+    }
+}
+
+
+
+const select = document.querySelector(".sous");
+select.addEventListener("change", globalFilter);
+
+const addLike = () =>{
+    likes += 1;
+    fetchLikes();
+}
+
+const fetchMedia = (photographer) => {
+    photograph = photographer;
+    getMedias();
+}
+
+const getMedias =  async() => {
+    medias = await getMediaByPhotographer(photograph.id);
+    console.log("medias :",medias);
+    medias = sortByTrending(medias);
+    displayGalerie(medias);
+
+    likes = medias.reduce(( totalLikes, media) => totalLikes + media.likes, 0)
+
+    fetchLikes();
+}
+
+const displayGalerie = (mediasArray) =>{
+    console.table(mediasArray);
+    const galerie = document.querySelector(".galerie");
+
+    galerie.innerText = "";
+
+    for (const media of mediasArray) {
+        const mediaType = media.image == null?"video":"image";
+        media.photograph = photograph;
+        const divVideoPost = new MediaFactory(mediaType, media, addLike);
+        divVideoPost.appendTo(galerie);
+    }
+}
+
+const fetchLikes = (likesCount) => {
+    const likeToFetch = likesCount || likes;
+
+    const divTotalLikes = document.querySelector('.total-likes');
+    divTotalLikes.innerText = likeToFetch;
 }
 
 const getPhotographData = async() => {

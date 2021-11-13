@@ -1,4 +1,10 @@
 import {getPhotograph}from "./dataProvider";
+import filterByTag from "./filter";
+
+const tags = document.querySelectorAll(".tag");
+let photographs = [];
+const conteneur1 = document.querySelector('.conteneur1');
+let selectedTag = "";
 
 const portrait = (data) => {
     const divPortrait =  document.createElement("div");
@@ -14,6 +20,7 @@ const portrait = (data) => {
 
     const image = document.createElement("img");
     image.src = "images/Photographers/" + data.portrait;
+    image.alt = "Photo de profil du photographe";
 
     linkPhotograph.appendChild(image);
     divImage.appendChild(linkPhotograph);
@@ -97,21 +104,45 @@ const displayPhotograph = (data) => {
 
     divPhotograph.append(divPortrait, divInfo, divHashtag);
 
-    const conteneur1 = document.querySelector('.conteneur1');
     conteneur1.append(divPhotograph);
 }
 
-const getPhotographData = async () => {
-    const photographs = await getPhotograph();
-    console.table(photographs);
-
-    for (const photograph of photographs) {
+// display photographs for filters
+const displayAllPhotograph = (allPhotograph) => {
+    conteneur1.innerText = "";
+    for (const photograph of allPhotograph) {
         displayPhotograph(photograph);
     }
 }
 
+// tags filter
+const initFilter = () =>{
+    tags.forEach((tagElement) => {
+        tagElement.addEventListener("click", (event) =>{
+            event.preventDefault();
+            const tag = event.currentTarget.id;
+            if (tag === selectedTag) {
+                displayAllPhotograph(photographs);
+                selectedTag = "";
+            } else {
+                const filterPhotograph = filterByTag(photographs, tag);
+                displayAllPhotograph(filterPhotograph);
+                selectedTag = tag;
+            }   
+        })
+    })
+}
+
+const getPhotographData = async () => {
+    photographs = await getPhotograph();
+    console.table(photographs);
+
+    displayAllPhotograph(photographs);
+}
+
 (function (){
     getPhotographData();
+    initFilter();
 })()
 
 
