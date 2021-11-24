@@ -1,31 +1,21 @@
-const trendingSort = (a, b) =>{
-    return b.likes - a.likes  ;
-}
+const trendingSort = (a, b) => b.likes - a.likes;
 
-export const sortByTrending = (medias) =>{
-    return medias.sort(trendingSort);
-}
+export const sortByTrending = (medias) => medias.sort(trendingSort);
 
+const titleSort = (a, b) => {
+  if (a.title <= b.title) {
+    return -1;
+  }
+  return 1;
+};
 
-const titleSort = (a, b) =>{
-    if (a.title <= b.title) {
-        return -1;
-    } 
-    return 1;
-}
+export const sortByTitle = (medias) => medias.sort(titleSort);
 
-export const sortByTitle = (medias) =>{
-    return medias.sort(titleSort);
-}
+const dateSort = (a, b) => {
+  if (a.date <= b.date) {
+    return -1;
+  }
+  return 1;
+};
 
-const dateSort = (a, b) =>{
-    if (a.date <= b.date){
-        return -1;
-    }
-    return 1;
-}
-
-export const sortByDate = (medias) =>{
-    return medias.sort(dateSort);
-}
-
+export const sortByDate = (medias) => medias.sort(dateSort);

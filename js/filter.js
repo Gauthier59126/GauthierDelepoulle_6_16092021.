@@ -1,7 +1,5 @@
-const filterByTag = (photographers, tag) =>{
-    return photographers.filter((photograph)=> 
-        photograph.tags.includes(tag)
-    )
-}
+const processFilter = (photograph, tag) => photograph.tags.includes(tag);
+
+const filterByTag = (allP, tag) => allP.filter((photograph) => processFilter(photograph, tag));
 
 export default filterByTag;

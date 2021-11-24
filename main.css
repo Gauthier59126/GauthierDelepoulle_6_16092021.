@@ -45,6 +45,7 @@ body, .page {
 }
 
 #block-page header .hashtags > a {
+  text-decoration: none;
   color: #901C1C;
   font-family: 'DM-Sans';
   font-weight: bold;
@@ -99,7 +100,7 @@ body, .page {
 
 #block-page .conteneur1 .div__photograph {
   width: 33%;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 #block-page .conteneur1 .div__photograph .div__portrait {
@@ -146,7 +147,7 @@ body, .page {
 
 #block-page .conteneur1 .div__photograph .div__portrait .nom > a > h1 {
   font-family: 'DM-Sans';
-  font-size: 36px;
+  font-size: 38px;
   font-weight: normal;
   margin: 0px;
 }
@@ -176,19 +177,19 @@ body, .page {
 
 #block-page .conteneur1 .div__photograph .div__info .ville {
   color: #901C1C;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 #block-page .conteneur1 .div__photograph .div__info .phrase-intro {
   color: #0c0c0c;
   padding-top: 5px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #block-page .conteneur1 .div__photograph .div__info .tarif {
   color: #929292;
   padding-top: 3px;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 #block-page .conteneur1 .div__photograph .div__hashtags {
@@ -497,6 +498,7 @@ body, .page {
           flex-direction: column-reverse;
   margin-right: 2%;
   margin-left: 2%;
+  cursor: pointer;
 }
 
 .page .block-page .conteneur2 .galerie .poste__photo video, .page .block-page .conteneur2 .galerie .poste__video video, .page body .conteneur2 .galerie .poste__photo video, .page body .conteneur2 .galerie .poste__video video {
@@ -582,7 +584,7 @@ body, .page {
 .page .block-page .content .lightbox, .page body .content .lightbox {
   position: fixed;
   z-index: 999;
-  height: 900px;
+  height: 100%;
   width: 100%;
   text-align: center;
   top: 0;
@@ -1000,7 +1002,7 @@ body, .page {
     margin-left: 0px;
   }
   .page #block-page header .div__logo {
-    padding-left: 60px;
+    margin-left: 60px;
     height: 40px;
   }
   .page #block-page header .hashtags {
@@ -1144,6 +1146,9 @@ body, .page {
   }
   .page .block-page .div__tarif-like {
     display: none;
+  }
+  .page .block-page .content .lightbox {
+    height: 100%;
   }
   .page .block-page .content .lightbox img {
     height: 40%;
@@ -1333,6 +1338,9 @@ body, .page {
   }
   .page .block-page .conteneur2 .galerie .poste__photo .description__photo .icone__like, .page .block-page .conteneur2 .galerie .poste__photo .description__video .icone__like, .page .block-page .conteneur2 .galerie .poste__video .description__photo .icone__like, .page .block-page .conteneur2 .galerie .poste__video .description__video .icone__like {
     margin-left: 0px;
+  }
+  .page .block-page .content .lightbox {
+    height: 100%;
   }
   .page .block-page .content .lightbox img {
     height: 50%;

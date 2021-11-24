@@ -222,6 +222,7 @@
                     flex-direction: column-reverse;
                     margin-right: 2%;
                     margin-left: 2%;
+                    cursor: pointer;
 
                     video{
                         border: none;
@@ -299,7 +300,7 @@
             .lightbox {
                 position: fixed;
                 z-index: 999;
-                height: 900px;
+                height: 100%;
                 width: 100%;
                 text-align: center;
                 top: 0;
