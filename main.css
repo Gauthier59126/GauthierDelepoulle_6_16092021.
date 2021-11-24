@@ -249,7 +249,7 @@ body, .page {
   font-size: 16px;
   border-radius: 5px;
   bottom: 0px;
-  right: 50px;
+  right: 250px;
   z-index: 10;
 }
 
@@ -1374,6 +1374,7 @@ body, .page {
     width: 30%;
     min-width: 0;
     font-size: 13px;
+    right: 50px;
   }
   .page .block-page .div__tarif-like .div__nb-like {
     width: 46%;

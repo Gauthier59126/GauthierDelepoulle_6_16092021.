@@ -12,7 +12,7 @@
     <body class="page">
         <div class="block-page">
             <header class="header">
-                <div class="div__logo"><a href="./index.html"><img src="images\logo_fisheye.PNG" alt="logo-fisheye"></a></div>
+                <div class="div__logo"><a href="./index.html"><img src="images/logo_fisheye.PNG" alt="logo-fisheye"></a></div>
             </header>
             <div class="conteneur1">
                 <!--<div class="div__info-profil">
@@ -29,7 +29,7 @@
                     </div>
                 </div>-->
                 <div class="div__bouton"><button class="btn-signup modal-btn">Contactez-moi</button></div>
-                <div class="div__portrait"><img class="img__profile" src="./images/Photographers/MimiKeel.jpg"></div>                
+                <div class="div__portrait"><img class="img__profile" src="./images/Photographers/MimiKeel.jpg" alt="Photo de profil du photographe"></div>                
             </div>
             <div class="conteneur2">
                 <div class="tri">
@@ -53,9 +53,8 @@
                   <span class="close"></span>
                   <div class="modal-body">
                     <form class="form1" name="reserve" action="index.html" method="get" onsubmit="return validate();">
-                        <div class="div-title">
-                          <!--  
-                            <h1 class="form-title">Contactez-moi </h1>-->
+                        <div class="div-title">                       
+                         <!--<h1 class="form-title">Contactez-moi </h1>-->
                         </div>                      
                         <div class="formData">  
                             <label for="first"  class="label__form">Prénom</label><br>
@@ -75,20 +74,20 @@
                         <div class="formData formData--modif">
                             <label for="message" class="label__form">Votre message</label><br>
                             <small class="error message error--message"></small>
-                            <textarea class="text-control" type="message" id="message" name="message"></textarea><br>
+                            <textarea class="text-control" id="message" name="message"></textarea><br>
                         </div>
                       <div class="div-btn"><input class="btn-submit button" type="submit" value="Envoyer"/></div>
                     </form>
                   </div>
                 </div>
             </div>
-            <span class="div__tarif-like">
+            <div class="div__tarif-like">
                 <div class="div__nb-like">
                     <div><h2 class="total-likes">297 081</h2></div>
                     <div><i class="fas fa-heart"></i></div>
                 </div>
                 <div class="div__tarif"><!--<h2>300€ / jour</h2>--></div>
-            </span>
+            </div>
 
             <!-- LIGHTBOX -->
             <div class="content">
@@ -97,16 +96,16 @@
                     <a href="#img3" class="light-btn btn-prev"><i class="fas fa-chevron-left"></i></a>
                     <a href="#_" class="btn-close">X</a>
                     <div class="contain-img">
-                        <img class="lightbox-image" src="" alt="Diaporama d'images">
-                        <video class="lightbox-video" src="" controls></video>
+                        <img class="lightbox-image" src="#" alt="Diaporama d'images">
+                        <video class="lightbox-video" src="#" controls></video>
                         <h2 class="title">Outdoor Baths</h2>  
                     </div>                    
                    <a href="#img2" class="light-btn btn-next"><i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
         </div>
+        <script src="./js/formulaire.js"></script>
+        <script src="public/page.bundle.js"></script>
+        <script src="public/nom.bundle.js"></script>
     </body>
-    <script src="./js/formulaire.js"></script>
-    <script src="public/page.bundle.js"></script>
-    <script src="public/nom.bundle.js"></script>
 </html>
