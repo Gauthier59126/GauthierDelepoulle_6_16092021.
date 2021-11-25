@@ -1,10 +1,14 @@
 // DOM Elements
 const modalbg = document.querySelector('.bground');
-const modalValidate = document.querySelector('.bground2');
 const modalBtn = document.querySelectorAll('.modal-btn');
 
 const modalClose = document.querySelector('.close');
 const btnSubmit = document.querySelector('.btn-submit');
+
+let fisrtNameValue = '';
+let nameValue = '';
+let mailValue = '';
+let textValue = '';
 
 // launch modal form
 function launchModal() {
@@ -27,6 +31,7 @@ function validateFirstName() {
   const firstName = document.querySelector('#first');
   const errorMessage = document.querySelector('.error.firstName');
   const { value } = firstName;
+  fisrtNameValue = value;
 
   if (!value.trim()) {
     errorMessage.innerText = 'Veuillez remplir ce champs';
@@ -47,6 +52,7 @@ function validateLastName() {
   const lastName = document.querySelector('#last');
   const errorMessage = document.querySelector('.error.lastName');
   const { value } = lastName;
+  nameValue = value;
 
   if (!value.trim()) {
     errorMessage.innerText = 'Veuillez remplir ce champs';
@@ -67,6 +73,7 @@ function validateEmail() {
   const email = document.querySelector('#email');
   const errorMessage = document.querySelector('.error.email');
   const { value } = email;
+  mailValue = value;
 
   if (!value.trim()) {
     errorMessage.innerText = 'Veuillez remplir ce champs';
@@ -88,6 +95,7 @@ function validateMessage() {
   const message = document.querySelector('#message');
   const errorMessage = document.querySelector('.error.message');
   const { value } = message;
+  textValue = value;
 
   if (!value.trim()) {
     errorMessage.innerText = 'Veuillez remplir ce champs';
@@ -112,7 +120,10 @@ function validateAll(event) {
   const isMessageValid = validateMessage();
   if (isFirstNameValid && isLastNameValid && isEmailValid && isMessageValid) {
     closeModal();
-    modalValidate.style.display = 'block';
+    console.log(fisrtNameValue);
+    console.log(nameValue);
+    console.log(mailValue);
+    console.log(textValue);
   }
 }
 
